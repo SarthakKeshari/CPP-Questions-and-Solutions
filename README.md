@@ -8,7 +8,7 @@ Other contribution opportunities - <br>
 <b>Java - [Java-Questions-and-Solutions](https://github.com/SarthakKeshari/Java-Questions-and-Solutions)</b>
 
 -----
-### Refer [Contribute.md](https://github.com/SarthakKeshari/CPP-Questions-and-Solutions/blob/master/Contribute.md) for contribution guidelines
+### Refer [CONTRIBUTING.md](https://github.com/SarthakKeshari/CPP-Questions-and-Solutions/blob/master/CONTRIBUTING.md) for contribution guidelines
 -----
 
 ### Benefits
