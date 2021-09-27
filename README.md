@@ -104,6 +104,7 @@ Rank | Contributor | Points Collected
 2 | - | -
 3 | - | -
 
+
 Thanks to these wonderful peoples ✨✨:
 
 <a href="https://github.com/SarthakKeshari/CPP-Questions-and-Solutions/graphs/contributors">
