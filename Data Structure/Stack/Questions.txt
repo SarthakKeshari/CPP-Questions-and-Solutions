@@ -1,0 +1,3 @@
+Ques: 
+Write a program of stack using arrays.
+(File Name: Stack using array.cpp)
