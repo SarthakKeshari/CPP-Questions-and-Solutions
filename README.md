@@ -4,6 +4,10 @@ This repository aims to solve and create new problems from different spheres of 
 
 You may be a part of this repository by contributing questions or solutions or both to the repository.
 
+Star ⭐ | Fork 🔗 | Contribute 💻
+
+<br>
+
 Other contribution opportunities - <br>
 <b>Java - [Java-Questions-and-Solutions](https://github.com/SarthakKeshari/Java-Questions-and-Solutions)</b>
 
