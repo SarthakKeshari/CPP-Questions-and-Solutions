@@ -17,9 +17,9 @@ All the conditions should be fulfilled for considering your code for merging -
 
 [] My code follows the guidelines of this project.<br>
 [] I have performed a self-review of my own code.<br>
-[] I have commented on my code.<br>
+[] I have commented my code.<br>
 [] My code gives the correct output.<br>
 [] I confirm that I have not copied the code from anywhere. In case its found that I have copied I can be banned from the repository.<br>
 
 
-[] I affirm that I strictly follow contributing guide and code of conduct.
+[] I affirm that I strictly follow contributing guidelines and code of conduct.
