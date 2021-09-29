@@ -5,6 +5,7 @@
  * @date 2021-09-29
  */
 
+// Write a program to find factorial of a number entered by the user. (Using loop)
 #include <iostream>
 
 int factorial(int number)
