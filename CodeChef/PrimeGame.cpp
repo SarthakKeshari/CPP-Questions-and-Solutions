@@ -19,6 +19,7 @@ int main(){
         }
     }
     
+    // cnt[i] array stores the count of prime numbers less that equal to i 
     cnt[0]=0;
     cnt[1]=0;
     for(int i=2;i<p;i++){
@@ -30,9 +31,11 @@ int main(){
     while(t--){
         int x,y;
         cin>>x>>y;
+        
+        // If x is divisible by the product of first (y+1) prime numbers, then it will be the losing state i.e. Chef will lose
         if(cnt[x]>=y+1){
             cout<<"Divyam\n";
-        }
+        } // If x is not divisible by the product of first (y+1) prime numbers, then it will be the winning state
         else{
             cout<<"Chef\n";
         }
