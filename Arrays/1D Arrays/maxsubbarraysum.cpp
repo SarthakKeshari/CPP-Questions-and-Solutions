@@ -25,8 +25,15 @@ int maxsubarraysum(int arr[],int n)
 //Driver program to test maxsubarraysum
 int main()
 {
-    int arr[]={2,8,9,-8,1,9,10,8,-7};
-    int n=sizeof(arr)/sizeof(arr[0]);
+    cout<<"Enter the number of Elements"<<endl;
+    int n;
+    cin>>n;
+    cout<<"Enter the elements in array"<<endl;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
     int maximumsum=maxsubarraysum(arr,n);
     cout<<"Maximum contiguous sum of array is "<<maximumsum;
     return 0;
