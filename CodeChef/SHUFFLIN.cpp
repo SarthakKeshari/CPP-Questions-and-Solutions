@@ -7,7 +7,7 @@ using namespace std;
 #define ll long long
 #define fast ios_base::sync_with_stdio(false); cin.tie(NULL);
 
-int main()//start of main function{
+int main(){//start of main function
     fast;
     ll t,n,e,o,ele,s;
     cin>>t;
