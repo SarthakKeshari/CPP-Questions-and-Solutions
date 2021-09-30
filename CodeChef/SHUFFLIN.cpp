@@ -22,11 +22,11 @@ int main()//start of main function{
         s=0;//initialising s(sum variable) as 0
         for(int i=1;i<=n;i++){
             cin>>ele;
-            if(ele%2==0&&o>0)//counting for even numbers{
+            if(ele%2==0&&o>0){//counting for even numbers
                 o--;
                 s++;
             }
-            else if(ele%2!=0&&e>0)//counting for odd numbers{
+            else if(ele%2!=0&&e>0){//counting for odd numbers
                 e--;
                 s++;
             }
