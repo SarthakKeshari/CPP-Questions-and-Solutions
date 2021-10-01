@@ -1,0 +1,1 @@
+Two elements a[i] and a[j] form an inversion if a[i] > a[j] and i < j and we have to calculate the total number of inversion in that array.
