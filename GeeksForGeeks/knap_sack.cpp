@@ -1,3 +1,8 @@
+/*=================================================================================================================================================================
+let us start !!
+
+problem link - https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1#
+================================================================================================================================================================= */
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -11,11 +16,13 @@ class Solution
     int knapSack(int W, int wt[], int val[], int n) 
     { 
        int t[n+1][W+1];
-       for(int i=0;i<n+1;i++)
+
+      //defining the for loop 
+      for(int i=0;i<n+1;i++)
           t[i][0]=0;
        for(int i=0;i<W+1;i++)
           t[0][i]=0;
-          
+
         for(int i=1;i<n+1;i++)
         {
             for(int j=1;j<W+1;j++)
@@ -43,24 +50,25 @@ int main()
     cin>>t;
     while(t--)
     {
-        //reading number of elements and weight
+        //read the  number of elements and weight
         int n, w;
         cin>>n>>w;
-        
+
         int val[n];
         int wt[n];
-        
+
         //inserting the values
         for(int i=0;i<n;i++)
             cin>>val[i];
-        
+
         //inserting the weights
         for(int i=0;i<n;i++)
             cin>>wt[i];
         Solution ob;
-        //calling method knapSack()
+        //calling method knapSack() with number of weights,array of weignts,array of elements number of elements
         cout<<ob.knapSack(w, wt, val, n)<<endl;
-        
+
     }
 	return 0;
 }  // } Driver Code Ends
+// ============================================================================================================================================================
