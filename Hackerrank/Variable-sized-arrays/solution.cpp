@@ -9,7 +9,7 @@ using namespace std;
 
 
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    
     int noofarr,noofqueries; //initializing no:of arr variable and no:of queries
     cin>>noofarr>>noofqueries; //getting input 
     vector<vector<int>>bigarr; //declaring an vector array which contains vector arrays as elements
