@@ -60,6 +60,8 @@ bool distance(int i, int j) {
 }
 bool bfs() {
 	queue<int> q;
+	// Note that passing the canyon may start at coordinate (0,ys) for any 0 ≤ ys ≤ W and 
+end at coordinate (L,ye) for any 0 &\le; ye ≤ W. Neither ys nor ye need to be integer.
 	vector<int> vis(n + 1, 0);
 
 	for(int i = 0; i < n; ++i) {
@@ -67,17 +69,23 @@ bool bfs() {
 			q.push(i);
 		}
 	}
-
+// here we are creating a while loop 
 	while(!q.empty()) {
 		int u = q.front();
 		q.pop();
 		for(int v: g[u]) {
+			//if else loop
 			if(!vis[v]) {
 				if(abs(w - coordinates[v].second) <= 100)
 					return true;
 				else {
 					vis[v] = 1;
-					q.push(v); 		} } }	}
+					q.push(v); 	
+				}
+			}
+		}	
+	}
+	
 	return false;
 }
 
@@ -85,6 +93,7 @@ int32_t main() {
 
 	cin >> l >> w >> n;
 	g = vector<vector<int> >(n);	
+	// let us now check through if ans else loop
 	
 	for(int i = 0; i < n; ++i) {
 		cin >> coordinates[i].first >> coordinates[i].second;
@@ -94,7 +103,11 @@ int32_t main() {
 		for(int j = i + 1; j < n; ++j) {
 			if(distance(i, j)) {
 				g[i].push_back(j);
-				g[j].push_back(i);  }  } 	}
+				g[j].push_back(i); 
+			}
+		}
+	}
+	// here we are asking for the output to print
 	cout << (bfs() ? "1\n" : "0\n");
 	return 0;
 }
