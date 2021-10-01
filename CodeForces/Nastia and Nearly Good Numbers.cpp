@@ -1,3 +1,6 @@
+
+Problem Link :- https://codeforces.com/problemset/problem/1521/A
+
 #include<bits/stdc++.h>
 #define N 100005
 #define mod 1000000007
@@ -10,7 +13,7 @@ int main()
 {
   fast();
   
-  int t;
+  int t; // t is the number of test cases
   cin>>t;
   while(t--)
   {
@@ -40,3 +43,4 @@ int main()
       cout<<x<<" "<<y<<" "<<z<<ln;
     }
 }
+// This code is contributed By Adarsh Kumar Singh (Username ---> Fury-MadMax)
