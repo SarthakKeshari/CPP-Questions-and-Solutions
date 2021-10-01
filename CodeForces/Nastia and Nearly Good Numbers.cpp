@@ -13,34 +13,35 @@ int main()
 {
   fast();
   
-  int t; // t is the number of test cases
-  cin>>t;
-  while(t--)
+  int c; // c is the number of test cases
+  cin>>c;
+  while(c--)
   {
     // taking the input from the user
-    ll a,b;
-    cin>>a>>b;
-    ll x,y,z;
+    ll A,B;
+    cin>>A>>B;
+    ll p,q,r;
     
-    // assuming that x is a positive integer that takes a nearly good number.
-    x=a;
+    // assuming that p is a positive integer that takes a nearly good number.
+    p=A;
     
-    // for y to be a perfectly good number if it is divisible by the product A*B.
-    y=a*b;
+    // for q to be a perfectly good number if it is divisible by the product A*B.
+    q=A*B;
     
     // according to question constraint this must hold
-    z=y+x;
+    r=q+p;
     
-    if(x==y)
+    if(p==q)
     {
       // if it dont satisfy the conditions print NO
-      cout<<"NO"<<ln;
+      cout<< "NO" <<ln;
     }
     else
     {
       // if it satisfies the conditions then print yes and print the elements also
-      cout<<"YES"<<ln;
-      cout<<x<<" "<<y<<" "<<z<<ln;
+      cout<< "YES" <<ln;
+      cout<< p <<" "<< q <<" "<< r <<ln;
     }
+}
 }
 // This code is contributed By Adarsh Kumar Singh (Username ---> Fury-MadMax)
