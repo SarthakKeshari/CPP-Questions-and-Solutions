@@ -1,0 +1,46 @@
+// Code contributed by Rakshit Pandey (Username-----> Master-Helix)
+
+//question link - https://codeforces.com/contest/1490/problem/C
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define fast() ios_base::sync_with_stdio(0); cin.tie(0);cout.tie(0);
+#define ll long long 
+#define l long long
+
+
+
+int main()
+{
+  fast();
+  ll t;
+  cin>>t;
+  while(t--)  // no. of test cases
+  {
+    ll n;
+    cin>>n; // the number to be expressed as sum of cubes
+    ll i=1;
+    int flag=0;
+    while(i*i*i<n)  // run this loop until one of the cube value is less than the desired input
+    {
+      if(floor(cbrt(n-(i*i*i)))==ceil(cbrt(n-(i*i*i))))  // if for any value, its floor of cube root and ceil of cube root is same, that means its perfect cube
+      {                                                   // if that number and (n- that number) are both perfect cubes , then we got two numbers whose sum is equal to n
+        flag=1;
+        break;
+      }
+      else{
+      i++;    // run until while stops
+      }
+    }
+    if(flag==0)          //flag variable to print the desired output
+    {
+      cout<<"NO"<<endl;
+    }
+    else
+    {
+      cout<<"YES"<<endl;
+    }
+  }
+}
