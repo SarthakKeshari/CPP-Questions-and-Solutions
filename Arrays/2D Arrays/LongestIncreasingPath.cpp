@@ -39,7 +39,7 @@
 const int dir[4][2] = {{-1, 0}, {0, -1}, {0, 1}, {1, 0}};
 int dfs(const vector<vector<int>> &matrix, vector<vector<int>> &dp, const int &r, const int &c) {
     if (dp[r][c] != -1) return dp[r][c];
-    dp[r][c] = 1;
+    dp[r][c] = 1;    //Now for all values -1, explore those locations in all 4 directions keeping in mind the constraint of strictly increasing.
     for (int i = 0; i < 4; i++) {
         int nextR = r + dir[i][0];
         int nextC = c + dir[i][1];
@@ -47,7 +47,7 @@ int dfs(const vector<vector<int>> &matrix, vector<vector<int>> &dp, const int &r
             matrix[nextR][nextC] <= matrix[r][c]) {
             continue;
         }
-        dp[r][c] = max(dp[r][c], 1 + dfs(matrix, dp, nextR, nextC));
+        dp[r][c] = max(dp[r][c], 1 + dfs(matrix, dp, nextR, nextC)); //Keep storing the best answer in a variable.
     }
     return dp[r][c];
 }
@@ -55,12 +55,13 @@ int solve(vector<vector<int>> &matrix) {
     int m = matrix.size();
     if (m < 1) return 0;
     int n = matrix[0].size();
-    vector<vector<int>> dp(m, vector<int>(n, -1));
+    vector<vector<int>> dp(m, vector<int>(n, -1));//Initialize a 'dp' table with values -1 of size row * column, same as that of input matrix.
     int ans = 0;
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             if (dp[i][j] == -1) dfs(matrix, dp, i, j);
-            ans = max(ans, dp[i][j]);
+            
+            ans = max(ans, dp[i][j]);//The max of all such explorations will be the maximum strictly increasing path.
         }
     }
     return ans;
