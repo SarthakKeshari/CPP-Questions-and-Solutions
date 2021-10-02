@@ -43,12 +43,12 @@ penguin | 1
 
 using namespace std;
 
-string lastWord(string s) {
-    int index = s.find_last_of(' ') + 1;
+string lastWord(string s) {                    //function to extract last word from string and convert to lowercase and return back
+    int index = s.find_last_of(' ') + 1;       //find the index where space is there andding +1 so that we get index of 1st letter of last word
 
-    string last = s.substr(index);
+    string last = s.substr(index);                                  
 
-    for(auto &c : last) {
+    for(auto &c : last) {                      //converting all letters to lowercase
         c = tolower(c);
     }
 
@@ -68,10 +68,10 @@ int main() {
             getline(cin, name);       //input the strings
             name = lastWord(name);
 
-            if(animals.count(name) == 0) {
+            if(animals.count(name) == 0) {     //if name not exists in multiset we add it in vector
                 names.push_back(name);
             }
-            animals.insert(name);
+            animals.insert(name);               //we insert all names into multiset to keep count
         }
 
         sort(names.begin(), names.end());
