@@ -1,30 +1,37 @@
+// C++ program to find maximum amount of water that can
+// be trapped within given set of bars.
 #include <bits/stdc++.h>
 using namespace std;
-int max(int x, int y) {
-    return (x > y) ? x : y;
-}
 
-int trap(int heights[], int n)
+int trap(int arr[], int n)
 {
-    int left = 0, right = n - 1, water = 0;
+    // left[i] contains height of tallest bar to the
+    // left of i'th bar including itself
+    int left[n];
  
-    int maxLeft = heights[left];
-    int maxRight = heights[right];
+    // Right [i] contains height of tallest bar to
+    // the right of ith bar including itself
+    int right[n];
  
-    while (left < right)
-    {
-        if (heights[left] <= heights[right])
-        {
-            left++;
-            maxLeft = max(maxLeft, heights[left]);
-            water += (maxLeft - heights[left]);
-        }
-        else {
-            right--;
-            maxRight = max(maxRight, heights[right]);
-            water += (maxRight - heights[right]);
-        }
-    }
+    // Initialize result
+    int water = 0;
+ 
+    // Fill left array
+    left[0] = arr[0];
+    for (int i = 1; i < n; i++)
+        left[i] = max(left[i - 1], arr[i]);
+ 
+    // Fill right array
+    right[n - 1] = arr[n - 1];
+    for (int i = n - 2; i >= 0; i--)
+        right[i] = max(right[i + 1], arr[i]);
+ 
+    // Calculate the accumulated water element by element
+    // consider the amount of water on i'th bar, the
+    // amount of water accumulated on this particular
+    // bar will be equal to min(left[i], right[i]) - arr[i] .
+    for (int i = 0; i < n; i++)
+        water += min(left[i], right[i]) - arr[i];
  
     return water;
 }
