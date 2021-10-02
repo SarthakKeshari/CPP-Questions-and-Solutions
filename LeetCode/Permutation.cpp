@@ -2,7 +2,7 @@
 class Solution {
 public:
   void backtrack(vector<int>& nums,vector<vector<int>>& result,int st){
-      if(st>=nums.size())
+      if(st>=nums.size()) 
       {
           result.push_back(nums);
           return;
@@ -15,7 +15,6 @@ public:
       }
         
     }
-    
     vector<vector<int>> permute(vector<int>& nums) {
         sort(nums.begin(),nums.end());
          vector<vector<int>> result;
