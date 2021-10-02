@@ -21,3 +21,5 @@ int main()
 	}
 	if(f!=1)cout<<"Number not found";
 }
+
+// This code is contributed by Rajat Jain
