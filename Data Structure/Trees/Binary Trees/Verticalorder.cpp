@@ -4,9 +4,9 @@ using namespace std;
 // structure of Node
 struct Node
 {
-	int data; 
-	int hd; 
-	Node *left, *right; 
+	int data; //data of the node
+	int hd; //horizontal distance of the node
+	Node *left, *right; //left and right
 
 	Node(int key)
 	{
@@ -30,6 +30,7 @@ void getVerticalOrder(Node* root, int hd, map<int, vector<int>> &m)
 void printVerticalOrder(Node* root)
 {
     map < int,vector<int> > m;
+    // Initialize hd' with 0
     int hd = 0;
     getVerticalOrder(root, hd,m);
  
@@ -56,16 +57,16 @@ void bottomView(Node *root)
 	queue<Node *> q;
 	root->hd = hd;
 	q.push(root);
-
+        // Loop until the queue is empty
 	while (!q.empty())
 	{
 		Node *temp = q.front();
 		q.pop(); 
 
 		hd = temp->hd;
-
+                // distance we need to replace the data
 		m[hd] = temp->data;
-
+                 // it to the queue with a horizontal distance hd-1.
 		if (temp->left != NULL)
 		{
 			temp->left->hd = hd-1;
@@ -78,7 +79,7 @@ void bottomView(Node *root)
 			q.push(temp->right);
 		}
 	}
-
+        // Traverse the map elements using the iterator
 	for (auto i = m.begin(); i != m.end(); i++)
 		cout << i->second << " ";
 }
@@ -92,12 +93,12 @@ void topView(Node* root)
     map<int, int> m;
     int hd = 0;
     root->hd = hd;
-
+    // push node and horizontal distance to queue
     q.push(root);
  
     while (q.size()) {
         hd = root->hd;
- 
+        // to hd, or returns  else zero
         if (m.count(hd) == 0)
             m[hd] = root->data;
         if (root->left) {
