@@ -9,20 +9,22 @@ using namespace std;
 int main() {
 	// your code goes here
 
-
+//Insert number of values you want to enter
 int t;
 cin>>t;
+//the loop would run until t !=0
 while(t--){
     string s;
+//insert a string
     cin>>s;
     int l=s.length();
-  
+  //intializing the arrays a and b
     int a[26]={0};
     int b[26]={0};
    
   
    
-   
+   //we spilt the string into halves and compare the halves
     for(int i=0;i<l/2;i++){
       a[(s[i]-'a')]++;
 //   cout<<a[i]<<endl;
@@ -30,6 +32,7 @@ while(t--){
     for(int i=(l+1)/2;i<l;i++){
       b[(s[i]-'a')]++;
    }
+//if both halves are same, then it's a Lapindrome otherwise not.
    bool x= false;
    for (int i=0;i<26;i++){
        if(a[i]!=b[i])
@@ -37,10 +40,10 @@ while(t--){
        
 }
 if (x){
-    cout<<'N'<<endl;
+    cout<<'No'<<endl;
 }
     else{
-        cout<<'Y'<<endl;
+        cout<<'Yes'<<endl;
     }
 
 }
