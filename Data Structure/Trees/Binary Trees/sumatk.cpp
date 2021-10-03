@@ -1,4 +1,4 @@
-//Print the level order traversal of binary tree and Print the left view of binary tree andPrint right view of binary tree.
+//You are given a number representing the level number you have to determine the sum of all nodes at that level.
 #include <iostream>
 #include<bits/stdc++.h>
 using namespace std;
