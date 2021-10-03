@@ -27,7 +27,7 @@ int main()
     ll sum=0;
     for(int j=0;j<n;j++)
     {
-      cin>>array[j];  // taking the inputs as an array inside the loo
+      cin>>array[j];  // taking the inputs as an array inside the loop
     }
     
     /* Here we have take two parameters, the beginning of the 
