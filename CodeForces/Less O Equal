@@ -1,0 +1,47 @@
+
+    #include<stdlib.h>
+    #include<bits/stdc++.h>
+    #include<math.h>
+    #include<vector>
+    #include<algorithm>
+    #include<set>
+    #include<math.h>
+    #include<queue>
+    #include<stack>
+    #include <iostream>
+    #include<string>
+    #include<unordered_set>
+    #define cn cout<<"NO\n"
+    #define cy cout<<"YES\n"
+    #define elif else if
+    #define ll long long
+    #define MOD 1000000007
+    #define FASTIO(); ios::sync_with_stdio(0); cin.tie(0);
+    #define pb push_back
+    #define srt(V) sort(all(V))
+    #define all(V) (V).begin(),(V).end()
+    #define nl cout<<"\n"
+    const long double PI=3.141592653589793238;
+    using namespace std;
+  int main(){
+      ll t=1;
+      // cin>>t;
+      while(t--){
+        ll n;
+        cin >> n;
+        ll k;
+        cin >> k;
+        ll a[n];
+        for(ll i=0; i<n; i++)cin >> a[i];
+        sort(a,a+n);
+        if(k==0){if(a[0]==1)cout << "-1" << endl; else cout << a[0]-1 << endl;}
+        else if(k==n)cout << a[k-1] << endl;
+        else{
+        
+          if(a[k]-a[k-1]==0)cout << "-1" << endl;
+          else cout << a[k-1] << endl;
+        }
+        }
+
+      return 0;
+  }
