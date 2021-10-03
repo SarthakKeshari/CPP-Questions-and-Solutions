@@ -1,3 +1,5 @@
+// check if loop is present in linked list or not.
+
 #include <iostream>
 #include <unordered_set>
 using namespace std;
