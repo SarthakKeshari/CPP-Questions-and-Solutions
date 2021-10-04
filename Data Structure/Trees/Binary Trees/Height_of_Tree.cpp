@@ -1,3 +1,5 @@
+// 3. Calculate Height of a Binary tree.
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -14,13 +16,15 @@ struct Node {
 	}
 };
 
+// Function to calculate height of the tree
+
 int HeightOfTree(Node* root)
 {
 	if (!root)
 		return 0;
 
-	int x = HeightOfTree(root->left);
-	int y = HeightOfTree(root->right);
+	int x = HeightOfTree(root->left); // Height of left subtree
+	int y = HeightOfTree(root->right); // Height of right subtree
 
 	return (max(x, y) + 1);
 }
