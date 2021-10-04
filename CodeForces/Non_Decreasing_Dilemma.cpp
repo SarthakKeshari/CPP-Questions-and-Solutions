@@ -1,3 +1,11 @@
+/*Alice has recently received an array a1,a2,…,an for her birthday! She is very proud of her array, and when she showed her friend Bob the array, he was very happy with her present too!
+
+ However, soon Bob became curious, and as any sane friend would do, asked Alice to perform q operations of two types on her array:
+
+1 x y: update the element ax to y (set ax=y).
+2 l r: calculate how many non-decreasing subarrays exist within the subarray [al,al+1,…,ar]. More formally, count the number of pairs of integers (p,q) such that l≤p≤q≤r and ap≤ap+1≤⋯≤aq−1≤aq.
+Help Alice answer Bob's queries!*/
+
 #include<bits/stdc++.h>
 using namespace std;
 #define nm (nl+nr>>1)
