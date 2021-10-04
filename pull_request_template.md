@@ -1,11 +1,20 @@
 ### Issue Id you have worked upon - 
-Your answer
+#233
 
 ### Briefly explain your program logic - 
-Your answer
+This problem is a typical application of segment tree.
+
+We maintain three attributes for each interval:
+1. The number of subarray that meet the condition (mark as ans);
+2. Starting from the leftmost side, the length of the longest continuous non-decreasing subarray (mark as left_size);
+3. Starting from the rightmost, the length of the longest non-decreasing subarray (mark as right_size).
+
+
 
 ### Screenshots(Attach 2 screenshots of your own input and output) - 
-Attach here
+
+![Input](./Input.png)
+![Output](./Output.png)
 
 
 <br>
