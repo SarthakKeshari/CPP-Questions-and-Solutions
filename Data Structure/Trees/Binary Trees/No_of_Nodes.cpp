@@ -1,3 +1,5 @@
+// 1. Calculate number of nodes in a Binary Tree
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -14,13 +16,15 @@ struct Node {
 	}
 };
 
+// Recursive function to count the nodes
+
 int CountNodes(Node* root)
 {
 	if (!root)
 		return 0;
 
-	int a = CountNodes(root->left);
-	int b = CountNodes(root->right);
+	int a = CountNodes(root->left); // Nodes of left subtree
+	int b = CountNodes(root->right); // Nodes of right subtree
 
 	return a + b + 1;
 }
