@@ -23,7 +23,7 @@ using namespace std;
 class HotelRoom 
 {
     public:
-
+//hotelrooms bathrooms and bedrooms.
         HotelRoom(int bedrooms, int bathrooms)
         : bedrooms_(bedrooms), bathrooms_(bathrooms) 
         {
@@ -66,7 +66,7 @@ int main() {
             rooms.push_back(new HotelApartment(bedrooms, bathrooms));
         }
     }
-
+//total profit.
     int total_profit = 0;
     for (auto room : rooms) {
         total_profit += room->get_price();
