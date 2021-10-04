@@ -17,17 +17,21 @@ using namespace std;
 
 int main()
 {
+    // number of elements
     int n;
     cin>>n;
     
+    //take input of array elements
     int arr[n];
     for(int i=0;i<n;i++)
     cin>>arr[i];
+    
     
     for(int i=0;i<n-1;i++)
     {
         for(int j=0;j<n-i-1;j++)
         {
+            // Swap the elements
             if(arr[j+1]<arr[j])
             swap(arr[j], arr[j+1]);
         }
