@@ -1,5 +1,9 @@
 # CPP-Questions-and-Solutions 🎯
 
+Finally project is on its way to trun into a website 
+### Website name - CodersArena
+(Contributed by [@Rasika Ghadge](https://github.com/rasikaghadge) during Phase-1 of website creation)
+
 This repository aims to solve and create new problems from different spheres of coding, which will serve as a single point access for all the students and learners to get solutions to the problems and a chance to solve problems as well.
 
 You may be a part of this repository by contributing questions or solutions or both to the repository.
