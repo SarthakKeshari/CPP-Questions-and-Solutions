@@ -1,3 +1,5 @@
+// 4. Calculate Diamter of a Binary Tree
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -14,6 +16,8 @@ struct Node {
 	}
 };
 
+// Function to calculate height of the tree
+
 int HeightOfTree(Node* root)
 {
 	if (!root)
@@ -24,6 +28,8 @@ int HeightOfTree(Node* root)
 
 	return (max(x, y) + 1);
 }
+
+// Function to calculate Diameter of the tree
 
 int DiameterOfTree(Node* root)
 {
