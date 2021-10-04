@@ -1,3 +1,6 @@
+// An hourglass is a subset of values with indices falling in this pattern in this graphical representation.
+// There are 16 hourglasses in array . An hourglass sum is the sum of an hourglass' values. Calculate the hourglass sum for every hourglass in array, then print the maximum hourglass sum. The array will always be 6 x 6.
+
 #include <cmath>
 #include <cstdio>
 #include <vector>
