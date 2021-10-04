@@ -1,4 +1,4 @@
-Sample Input 1
+/* Sample Input 1
 5
 7 1 2 0 4 
 0 1 2 4 7
@@ -6,7 +6,7 @@ Sample Input 1
 Sample Input 2
 6
 6 4 5 1 0 2
-0 1 2 4 5 6
+0 1 2 4 5 6 */
   
 
 #include <iostream>
@@ -43,5 +43,5 @@ int main()
     return 0;
 }
 
-Time Complexity: O(n*n)
-Space Complexity: O(1)
+/* Time Complexity: O(n*n)
+Space Complexity: O(1) */
