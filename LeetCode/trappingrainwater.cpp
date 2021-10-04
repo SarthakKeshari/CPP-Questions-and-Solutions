@@ -65,7 +65,7 @@ int trap(int bars[], int n)
  
 int main(void)
 {
-    int heights = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+    int heights[] = { 0,1,0,2,1,0,1,3,2,1,2,1 };
     int n = sizeof(heights) / sizeof(heights[0]);
  
     printf("The maximum amount of water that can be trapped is %d",
