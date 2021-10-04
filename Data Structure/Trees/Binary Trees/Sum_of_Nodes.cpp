@@ -1,3 +1,5 @@
+// 2. Calculate the sum of nodes of a binary tree
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -19,8 +21,8 @@ int SumOfNodes(Node* root)
 	if (!root)
 		return 0;
 
-	int a = SumOfNodes(root->left);
-	int b = SumOfNodes(root->right);
+	int a = SumOfNodes(root->left); // Sum of left subtree
+	int b = SumOfNodes(root->right); // Sum of right subtree
 
 	return a + b + root->data;
 }
