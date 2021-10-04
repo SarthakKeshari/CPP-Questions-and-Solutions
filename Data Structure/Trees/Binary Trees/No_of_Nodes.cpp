@@ -14,15 +14,15 @@ struct Node {
 	}
 };
 
-int SumOfNodes(Node* root)
+int CountNodes(Node* root)
 {
 	if (!root)
 		return 0;
 
-	int a = SumOfNodes(root->left);
-	int b = SumOfNodes(root->right);
+	int a = CountNodes(root->left);
+	int b = CountNodes(root->right);
 
-	return a + b + root->data;
+	return a + b + 1;
 }
 
 int main()
@@ -37,7 +37,7 @@ int main()
 	root->left->right->right = new Node(6);
 	root->right->right->right = new Node(7);
 
-	int ans = SumOfNodes(root);
+	int ans = CountNodes(root);
 
 	cout << ans;
 
