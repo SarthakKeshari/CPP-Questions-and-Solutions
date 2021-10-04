@@ -1,3 +1,6 @@
+// Write a program to validate the date entered by the user.
+// Date format - dd/yyyy/mm
+
 #include <iostream>
 #include <string>//library for string manipulation functions
 #include <sstream>//library for string to integer type casting
