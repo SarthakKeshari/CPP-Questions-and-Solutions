@@ -13,7 +13,7 @@
 #include <vector>
 #include <string>
 using namespace std;
-
+// Spells code.
 class Spell { 
     private:
         string scrollName;
@@ -25,7 +25,7 @@ class Spell {
             return scrollName;
         }
 };
-
+//Fireball Code.
 class Fireball : public Spell { 
     private: int power;
     public:
@@ -34,7 +34,7 @@ class Fireball : public Spell {
             cout << "Fireball: " << power << endl;
         }
 };
-
+//Frostbite Code.
 class Frostbite : public Spell {
     private: int power;
     public:
@@ -43,7 +43,7 @@ class Frostbite : public Spell {
             cout << "Frostbite: " << power << endl;
         }
 };
-
+//Thunderstorm Code.
 class Thunderstorm : public Spell { 
     private: int power;
     public:
@@ -52,7 +52,7 @@ class Thunderstorm : public Spell {
             cout << "Thunderstorm: " << power << endl;
         }
 };
-
+//Waterbolt Code.
 class Waterbolt : public Spell { 
     private: int power;
     public:
@@ -61,7 +61,7 @@ class Waterbolt : public Spell {
             cout << "Waterbolt: " << power << endl;
         }
 };
-
+//SpellJournal Code.
 class SpellJournal {
     public:
         static string journal;
@@ -99,7 +99,7 @@ void counterspell(Spell *spell) {
     int n = strB.length();
 
     std::vector<std::vector<int>> vLCSMatrix(m + 1, std::vector<int>(n + 1));
-//for loop.
+//for loop and if-else ladder.
     for (int i = 1; i <= m; i++)
     {
         for (int j = 1; j <= n; j++)
