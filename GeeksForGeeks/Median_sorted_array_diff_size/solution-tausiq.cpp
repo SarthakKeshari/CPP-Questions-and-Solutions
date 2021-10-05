@@ -16,8 +16,11 @@ int main()
 	cin>>array1[i];
     for (i=0;i<n;i++)
     cin>>array2[i];
+	//merging array 1 and array 2
 	merge(array1,array2,array3);
 	quickSort(array3,0,m+n);
+    //sorting array3 i.e. merged array using quicksort algorithm
+	//median of arrays from merged array.
 	median=MedianofArrays(array3,m,n);
 	cout<<median;
     return 0;
