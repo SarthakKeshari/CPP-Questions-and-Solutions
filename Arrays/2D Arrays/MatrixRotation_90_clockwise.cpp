@@ -23,7 +23,7 @@ void rotate90Clockwise(int a[N][N])
 	}
 }
 
-
+// Function to Display Matrix
 void printMatrix(int arr[N][N])
 {
 	for (int i = 0; i < N; i++) {
