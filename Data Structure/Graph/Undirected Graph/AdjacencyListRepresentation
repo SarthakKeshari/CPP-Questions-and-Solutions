@@ -1,4 +1,4 @@
-//Representation of directed graph using Adjacency List
+//Representation of undirected graph using Adjacency List
 //The below code is implemented in C++
 
 #include <bits/stdc++.h>
