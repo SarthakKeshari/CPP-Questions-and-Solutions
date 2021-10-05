@@ -1,148 +1,100 @@
-// C++ program to Implement a stack
-//using singly linked list
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-// Declare linked list node
-
+//Structure of the Node
 struct Node
 {
-	int data;
-	struct Node* link;
+int data;
+
+Node *next;
 };
 
-struct Node* top;
+// top pointer to keep track of the top of the stack
+Node *top = NULL;
 
-// Utility function to add an element
-// data in the stack insert at the beginning
-void push(int data)
+//Function to check if stack is empty or not
+bool isempty()
 {
-	
-	// Create new node temp and allocate memory
-	struct Node* temp;
-	temp = new Node();
-
-	// Check if stack (heap) is full.
-	// Then inserting an element would
-	// lead to stack overflow
-	if (!temp)
-	{
-		cout << "\nHeap Overflow";
-		exit(1);
-	}
-
-	// Initialize data into temp data field
-	temp->data = data;
-
-	// Put top pointer reference into temp link
-	temp->link = top;
-
-	// Make temp as top of Stack
-	top = temp;
+ if(top == NULL)
+    return true; 
+ 
+ return false;
 }
 
-// Utility function to check if
-// the stack is empty or not
-int isEmpty()
+//Function to insert an element in stack
+void push (int value)
 {
-	return top == NULL;
+  Node *point = new Node();
+  point->data = value;
+  point->next = top;
+  top = point;
 }
 
-// Utility function to return top element in a stack
-int peek()
+//Function to delete an element from the stack
+void pop ( )
 {
-	
-	// Check for empty stack
-	if (!isEmpty())
-		return top->data;
-	else
-		exit(1);
+ if ( isempty() )
+  cout<<"Stack is Empty";
+ else
+ {
+  Node *point = top;
+  top = top -> next;
+  delete(point);
+ }
 }
 
-// Utility function to pop top
-// element from the stack
-void pop()
+// Function to show the element at the top of the stack
+void peek()
 {
-	struct Node* temp;
-
-	// Check for stack underflow
-	if (top == NULL)
-	{
-		cout << "\nStack Underflow" << endl;
-		exit(1);
-	}
-	else
-	{
-		
-		// Top assign into temp
-		temp = top;
-
-		// Assign second node to top
-		top = top->link;
-
-		// Destroy connection between
-		// first and second
-		temp->link = NULL;
-
-		// Release memory of top node
-		free(temp);
-	}
+ if ( isempty() )
+  cout<<"Stack is Empty";
+ else
+  cout<<"Element at top is : "<< top->data;
 }
 
-// Function to print all the
-// elements of the stack
+// Function to Display the stack
 void display()
 {
-	struct Node* temp;
+ if ( isempty() )
+  cout<<"Stack is Empty";
+ else
+ {
+  Node *temp=top;
+  while(temp!=NULL)
+  {   cout<<temp->data<<" ";
+   temp=temp->next;
+  }
+  cout<<"\n";
+ }
+ }
 
-	// Check for stack underflow
-	if (top == NULL)
-	{
-		cout << "\nStack Underflow";
-		exit(1);
-	}
-	else
-	{
-		temp = top;
-		while (temp != NULL)
-		{
-
-			// Print node data
-			cout << temp->data << "-> ";
-
-			// Assign temp link to temp
-			temp = temp->link;
-		}
-	}
-}
-
-// Driver Code
+// Main function
 int main()
 {
-	
-	// Push the elements of stack
-	push(11);
-	push(22);
-	push(33);
-	push(44);
 
-	// Display stack elements
-	display();
+ int choice, flag=1, value;
 
-	// Print top element of stack
-	cout << "\nTop element is "
-		<< peek() << endl;
+ //Menu Driven Program using Switch
+ while( flag == 1)
+ {
+ cout<<"\n1.Push\n 2.Pop\n 3.peek\n 4.display\n 5.exit\n";
+ cin>>choice;
+ switch (choice)
+ {
+ case 1: cout<<"Enter Value:\n";
+         cin>>value;
+         push(value);
+         break;
+ case 2: pop();
+         break;
+ case 3: display();
+         break;
+ case 4: peek();
+         break;
+ case 5: flag = 0;
+         break;
+ }
+ }
 
-	// Delete top elements of stack
-	pop();
-	pop();
-
-	// Display stack elements
-	display();
-
-	// Print top element of stack
-	cout << "\nTop element is "
-		<< peek() << endl;
-		
-	return 0;
+return 0;
 }
