@@ -58,30 +58,30 @@ while(t--){
    for(int i=0;i<n;i++){
         cin>>a[i];
         if(a[i]>0)
-        s.insert({-a[i],i+1}); // inserting all elememnts in decreasing order 
+        s.insert({-a[i],i+1}); // inserting all elememnts in decreasing order by taking -ve sign with their indices
    }
 
    vector<pair<int,int>>v;
 
    while(s.size()>1){
 
-    auto it=*s.begin();
+    auto it=*s.begin(); //  we picked maximum elements because we need maximum no of talks so every time we picked two maximum element 
     s.erase(it);
     auto it1=*s.begin();
     s.erase(it1);
 
-    v.push_back({it.second,it1.second});   Always picking highest value from set and insert in vector
-    it.first++;
+    v.push_back({it.second,it1.second});  // Always picking  two maximum element insert their indices in the vector in vector
+    it.first++;                         //  decrease the value of element by 1 and reinsert in the set till their value >0 
     it1.first++;
-        if(it.first<0)
+        if(it.first<0)   
     s.insert({it.first,it.second});
      if(it1.first<0)
     s.insert({it1.first,it1.second});
 
 
    }
-   cout<<v.size()<<el;
-   for(auto x:v)           //printing all elements of vector v
+   cout<<v.size()<<el;        //printing maximum no of talks
+   for(auto x:v)           //printing person who talks with each other every time
     cout<<x.first<<" "<<x.second<<el;
 
 
