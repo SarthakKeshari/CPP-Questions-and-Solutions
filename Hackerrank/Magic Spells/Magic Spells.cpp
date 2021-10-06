@@ -8,12 +8,32 @@
 
 //Full Application Based Question.
 
+//Logic:- 
 
+//The wizard will read t scrolls, which are hidden from you.
+//Every time he casts a spell, it's passed as an argument to your counterspell function.
+//Constraints
+
+  //1 <=  t  <=  100
+  //1 <=  | s | <= 1000 , where s is a scroll name.
+
+//Each scroll name,  s , consists of uppercase and lowercase letters.
+
+//After identifying the given spell, print its name and power.
+//If it is a generic spell, find a subsequence of letters that are contained in both the spell name and your spell journal. Among all such subsequences, find and print the length of the longest one on a new line.
+
+
+
+
+
+
+
+//these are different types of library required for this program.
 #include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
-// Spells code.
+// ThIS is the Spells code.
 class Spell { 
     private:
         string scrollName;
@@ -25,7 +45,7 @@ class Spell {
             return scrollName;
         }
 };
-//Fireball Code.
+//This is the Fireball Code.
 class Fireball : public Spell { 
     private: int power;
     public:
@@ -34,7 +54,7 @@ class Fireball : public Spell {
             cout << "Fireball: " << power << endl;
         }
 };
-//Frostbite Code.
+//This is the Frostbite Code.
 class Frostbite : public Spell {
     private: int power;
     public:
@@ -43,7 +63,7 @@ class Frostbite : public Spell {
             cout << "Frostbite: " << power << endl;
         }
 };
-//Thunderstorm Code.
+//This is the Thunderstorm Code.
 class Thunderstorm : public Spell { 
     private: int power;
     public:
@@ -52,7 +72,7 @@ class Thunderstorm : public Spell {
             cout << "Thunderstorm: " << power << endl;
         }
 };
-//Waterbolt Code.
+//This is the Waterbolt Code.
 class Waterbolt : public Spell { 
     private: int power;
     public:
@@ -61,7 +81,7 @@ class Waterbolt : public Spell {
             cout << "Waterbolt: " << power << endl;
         }
 };
-//SpellJournal Code.
+//This is the SpellJournal Code.
 class SpellJournal {
     public:
         static string journal;
@@ -72,7 +92,7 @@ class SpellJournal {
 string SpellJournal::journal = "";
 
 void counterspell(Spell *spell) {
-//if-else ladder.
+//This is the if-else ladder.
   
   if (Fireball *fb = dynamic_cast<Fireball*>(spell))
     {
@@ -99,7 +119,7 @@ void counterspell(Spell *spell) {
     int n = strB.length();
 
     std::vector<std::vector<int>> vLCSMatrix(m + 1, std::vector<int>(n + 1));
-//for loop and if-else ladder.
+//This is the for loop and if-else ladder.
     for (int i = 1; i <= m; i++)
     {
         for (int j = 1; j <= n; j++)
@@ -119,7 +139,7 @@ void counterspell(Spell *spell) {
     }
 
 }
-//If-else ladder.
+//This is the If-else ladder.
 class Wizard {
     public:
         Spell *cast() {
