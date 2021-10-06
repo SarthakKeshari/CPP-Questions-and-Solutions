@@ -1,8 +1,8 @@
 ### Issue Id you have worked upon - 
-Your answer
+Kindly write your answer here
 
 ### Briefly explain your program logic - 
-Your answer
+Kindly write your answer here
 
 ### Screenshots(Attach 2 screenshots of your own input and output) - 
 Attach here
