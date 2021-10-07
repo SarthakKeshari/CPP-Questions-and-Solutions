@@ -1,0 +1,12 @@
+Enter your question -
+#Given a doubly-linked list of positive integers. The task is to print the given doubly linked list data in reverse order.
+
+Constraints
+Number of nodes [0, 5000].
+-5000 <= Node.val <= 5000
+
+Enter link to the question(if question belongs to any online platform) -
+https://www.geeksforgeeks.org/print-doubly-linked-list-in-reverse-order/
+
+Tags for the question(eg - Array, Basic, Stack, etc.) -
+LinkedList, traversal, pointers
