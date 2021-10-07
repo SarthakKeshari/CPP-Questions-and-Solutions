@@ -19,7 +19,7 @@ using namespace std;
 int main() {
 	// your code goes here
 	int x,y;
-	// For printing 8*9 letter H
+	// For printing 8*9 letter Z
 	for(x=0;x<8;x++){   
 	    for(y=0;y<9;y++){
 	        
