@@ -1,3 +1,4 @@
+/* EXPLANATION OF DYNAMIC STACK ALONG WITH CODE*/
 /*
 Stacks, often known as Last-In-First-Out (LIFO) structures, are well-known.
 Push and pop are the two primary operations of a stack, where push puts an element at the top and pop removes an element from the top.
@@ -178,12 +179,12 @@ this is simple menue driven code
 
             case 4:
                 
-                s.size();
+                cout<<s.size()<<endl;
                
                 break;
                 
                 case 5:
-                s.checkEmpty();
+                cout<<s.checkEmpty()<<endl;;
                 break;
                 
                 case 6:
