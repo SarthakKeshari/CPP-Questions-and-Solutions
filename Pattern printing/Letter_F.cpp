@@ -14,11 +14,6 @@
 using namespace std;
 
 int main() {
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
-
     // Printing the pattern
 
     for (int i = 0; i < 9; i++)
