@@ -22,16 +22,16 @@ int main()
 {
   fast();
   
-  //// for printing the pattern I have used 3 distinct patterns for printing the letter I 
+  // for printing the pattern I have used 3 distinct patterns for printing the letter I 
   
-	string S1[3] = {"$$$$##$$$$", "    ##", "$$$$##$$$$"};
-	int number = 9;
-	int print[9] = {0,1, 1, 1, 1, 1, 1, 1, 0}; //iterating over the correct sequence and printing the correct pattern
-	for(int j=0; j < number ;j++) // for loop from 0 to n 
-	{
-		cout << S1[ print[j] ] << ln; // prints the final pattern
-	}
-	return 0;
+string S1[3] = {"$$$$##$$$$", "    ##", "$$$$##$$$$"};
+int number = 9;
+int print[9] = {0,1, 1, 1, 1, 1, 1, 1, 0}; //iterating over the correct sequence and printing the correct pattern
+for(int j=0; j < number ;j++) // for loop from 0 to n 
+{
+	cout << S1[ print[j] ] << ln; // prints the final pattern
+}
+return 0;
 }
 
 // This Code is contributed by Adarsh Kumar Singh (Username ----> Fury-MadMax)
