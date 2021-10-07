@@ -1,3 +1,4 @@
+/*
 D. Productive Meeting
 time limit per test2 seconds
 memory limit per test256 megabytes
@@ -30,7 +31,7 @@ On each of the next k lines print two integers i and j (1≤i,j≤n and i≠j) �
 If there are several possible answers, you may print any of them.
 
 
-
+*/
 
 
 #include<bits/stdc++.h>
