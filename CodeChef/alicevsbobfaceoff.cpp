@@ -1,20 +1,4 @@
-#### Name: Alice vs Bob Faceoff 
-#### Language: C++
-#### Platform: Codechef
-#### Question: https://www.codechef.com/LTIME100B/problems/ALBOFACE
 
-#### Question Statement
-Alice and Bob have got an integer N. They decide to play a game. Alice and Bob make alternating moves: Alice makes the first move, Bob makes the second move, 
-Alice makes the third one, and so on. The game continues until N becomes 0. The player who is unable to make a move loses.
-During each turn a player can make one of the following moves:
-Choose an integer X such that X can be expressed as 2Y, Y≥1. The chosen X must also be a factor of N. After choosing an integer X which satisfies the mentioned criteria,
-the player will divide N by X.
-If Move 1 is not possible , the player will subtract 1 from N.
-Predict the winner of the game if the game is played optimally by both the players.
-
-#### Solution:
-
-```
 #pragma GCC optimize("Ofast")
 #pragma GCC target("avx,avx2,fma")
 #pragma GCC optimization("unroll-loops")
@@ -95,4 +79,4 @@ int main()
         }
     }
 }
-```
+//done by satkar2001  codechef link:https://www.codechef.com/users/satkar_01
