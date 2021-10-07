@@ -9,9 +9,9 @@ vector<long long> nextLargerElement(vector<long long> arr, int n){
         
         vector<long long>v;  // to store the output
         
-        v.push_back(-1);  // for rightmost element . no right element present
+        v.push_back(-1);    // for rightmost element . no right element present
         stack<long long>s;
-        s.push(arr[n-1]); rightmost at top
+        s.push(arr[n-1]);  //rightmost at top
         for(int i=n-2;i>=0;i--)  // iterating backwards
         {
             if(arr[i]<s.top())  // here the top will be nearest right neighbour which is greater so push in vector
