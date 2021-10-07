@@ -1,3 +1,4 @@
+/*
 #### Name: Alice vs Bob Faceoff 
 #### Language: C++
 #### Platform: Codechef
@@ -14,7 +15,7 @@ Predict the winner of the game if the game is played optimally by both the playe
 
 #### Solution:
 
-```
+*/
 #pragma GCC optimize("Ofast")
 //used for speeding up code
 #pragma GCC target("avx,avx2,fma")
@@ -121,4 +122,4 @@ int main()
     }
 }
 
-```
+
