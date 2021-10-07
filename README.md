@@ -10,6 +10,12 @@ Star ⭐ | Fork 🔗 | Contribute 💻
 
 Finally project is on its way to turn into a website 
 ### Website name - CodersArena <sub>(Contributed by [@Rasika Ghadge](https://github.com/rasikaghadge) during Phase-1 of website creation)</sub>
+### Website logo - 
+<p align="center">
+  <img src="https://github.com/SarthakKeshari/CPP-Questions-and-Solutions/blob/main/logo.png" width=40% height=40%>
+</p>
+
+### <p align="right"><sub>(Contributed by [@Pranavanbu28](https://github.com/Pranavanbu28) during Phase-2 of website creation)</sub></p>
 
 <br>
 
