@@ -1,3 +1,4 @@
+//sort the colors input by the user. take red as 0, white as 1 and blue as 2
 #include <iostream>
 using namespace std;
 int main()
