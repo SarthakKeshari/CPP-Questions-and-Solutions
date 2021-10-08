@@ -1,3 +1,13 @@
+/*Let's define a function P(x,y)=(x−y)2. For given real numbers a and b, let's define a polynomial Qa,b(x)=P(P(P(x,a),a−b),x−b).
+
+Next, let's define a function F(a,b):
+
+If Qa,b(x) has no real roots, F(a,b)=0.
+Otherwise, let r be the largest real root of Qa,b(x).
+If r is rational, it can be represented by a fraction r=pq, where p and q are coprime integers and q>0. Then, F(a,b)=p+q.
+If r is irrational, it can be proved that in this case, it can be represented in the form r=p+z√q, where p, q and z are integers, q>0 and z>0. Choose the representation with the smallest value of q (it is guaranteed to be unique in this case). Then, F(a,b)=p+z+q.
+You are given a sequence of integers c1,c2,…,cN. Find ∑Ni=1∑Nj=1F(ci,cj).*/
+    
 #include <bits/stdc++.h>
 #define FR(i, N) for (int i = 0; i < int(N); i++)
 #define all(x) begin(x), end(x)
