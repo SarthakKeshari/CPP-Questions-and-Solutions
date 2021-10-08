@@ -1,3 +1,6 @@
+// question: Write a program in Java to sort the boundary elements of a Two Dimensional Matrix and print the sorted and original matrices.
+// Constraints: The program MUST take input from the user for the dimensions of the matrix.
+
 import java.util.Arrays;
 import java.util.*;  
 public class Main
