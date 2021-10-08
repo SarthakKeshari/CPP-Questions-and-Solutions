@@ -13,12 +13,12 @@ class Solution {
 public:
     int maxProfit(vector<int>& prices) 
     {
-        int maxl = 0, minPrice = INT_MAX;
-        for(int i = 0; i < prices.size(); i++) 
+        int maxPro = 0, minPrice = INT_MAX;
+        for(int i = 0; i < prices.size(); i++)// iterating till the end of price vector
     {
-        minPrice = min(minPrice, prices[i]);
-        maxl = max(prices[i] - minPrice, maxl);
+        minPrice = min(minPrice, prices[i]); //to find the minimum price for buying the stock
+        maxPro = max(prices[i] - minPrice, maxPro); // calculating the maximum profit 
     }
-    return maxl;
+    return maxPro;
     }
 };
