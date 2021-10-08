@@ -1,3 +1,38 @@
+
+#Quaestion
+
+/*You are given a prime p and a matrix M with N rows (numbered 1 through N) and N columns (numbered 1 through N). For each row r and column c, the cell in row r and column c can either be empty or contain an integer Mr,c. Initially, all cells are empty.
+
+Now you should process Q queries. In each query, you are given integers x, y and v and you should do the following:
+
+If the cell (x,y) is empty before this query, put the value v in it, i.e. set Mx,y to v.
+Otherwise, i.e. if the cell (x,y) is not empty, make this cell empty again. It is guaranteed that in such a case, Mx,y=v before this query; v is provided for convenience.
+Afterwards, Chef wants you to find the number of ways to fill all empty cells with (not necessarily the same) integers in such a way that the resulting matrix is curious. Since this number may be large, compute it modulo 109+7.
+In particular, when there are no empty cells in the matrix, the answer is 1 if the matrix is curious or 0 if it is not curious.
+
+In a curious matrix:
+
+Each cell contains an integer between 1 and p−1 inclusive.
+For each non-trivial square submatrix A of M (a submatrix containing more than one cell), its determinant |A| is a multiple of p.
+For example, consider the following matrix.
+A=⎡⎣⎢122244122⎤⎦⎥
+This matrix is curious. For the prime p=5, each of the elements of the matrix is in the range [1,p−1]. Also, the determinant of each non-trivial square submatrix (there are five of them) is a multiple of the given prime ― for example, the determinant of the whole matrix is 0.
+
+B=[3114]
+The above matrix is not a curious matrix for p=5, since the determinant of the only non-trivial square submatrix (which is the whole matrix) is 11, not a multiple of p.*/
+
+
+
+
+
+#Solution
+
+
+
+
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
