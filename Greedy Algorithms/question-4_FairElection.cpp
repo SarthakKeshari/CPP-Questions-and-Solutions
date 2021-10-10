@@ -1,3 +1,5 @@
+//https://www.codechef.com/problems/FAIRELCT
+
 #include <iostream>
 using namespace std;
 int main() {
