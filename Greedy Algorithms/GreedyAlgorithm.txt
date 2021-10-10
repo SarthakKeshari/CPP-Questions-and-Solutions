@@ -1,0 +1,5 @@
+What is a Greedy Algorithm?
+Answer: Greedy builds up a solution piece by piece, always choosing the next piece that offers the most obvious and immediate benefit. 
+So the problems where choosing locally optimal also leads to global solution are best fit for Greedy.
+
+Reference Article for more information- https://www.geeksforgeeks.org/greedy-algorithms/
