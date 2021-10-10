@@ -1,0 +1,36 @@
+Introduction to C++
+				-Anushka Srivastava
+C++ was developed by Bjarne Stroustrup at in 1979 at Bell Lab. It is a popular general-purpose programming language . It can also be considered as a superset of C language. It supports both procedural and object oriented programming paradigms as it is a Multi-paradigm language. It allows you to divide complex problems into smaller parts  with help of objects. C++ is a medium level programming language.
+
+History
+A Danish Computer Scientist , Bjarne Stroustrup started working on ‘C with classes’  which was a predecessor to C++ in 1979. He found that Simula has some very helpful features for development of software on large scale. Therefore , he set out to enhance C Language with features similar to Simula. At first , he added some features to C compiler which included default arguments, derived classes, classes , inlining and strong typing.
+Then , he began developing a successor to C with classes which was named as C++ in 1982. Futhermore , he added some more features like operator overloading, functions, virtual functions, comments, constants , references.
+The first edition of C++ Programming was released in 1985 and came into commercial implementation in October , 1985. Then , C++ 2.0 was released in 1989 followed by second updated edition  of C++ Programming Language in 1991 which included features like abstract class, multiple inheritance, static member functions and protected members. The Annotated C++ Reference Manual was published in 1990.
+C++98 was released  in 1998. Then, in 2003 , C++03 was released.  After enlarging the standard library , adding some more features, C++11 was released in 2011.In 2014,  after minor update , C++14 . Then , introduction of various new additions and features was made in C++17. In February , 2020 , C++ was finalized. On 4th September, 2020 C++20 standard draft was approved which was later published officially on  15th December,2020.
+
+Advantages
+-	C++ is a portable and platform independent language that means a user can the same program easily on different platforms and operating systems.
+-	C++ is a  Multi Paradigm as it supports seven different styles of programming.
+-	The speed performance of optimized code of C++ is comparatively much better than C Language.
+-	C++  has a feature of Dynamic Memory Allocation which allows users to control and manage the memory according to their requirements.
+-	C++ supports classes, objects, polymorphism, inheritance, encapsulation , abstraction as it is an Object Oriented Language.
+
+Disadvantages
+-	C++ gives user full access to memory as there is an absence of garbage collector.
+-	C++ does not support built in threads.
+-	The concept of pointers consumes a lot of memory.
+-	C++ has no security.
+-	C++ programs can get very complex for high level programs.
+
+IDE
+1.	Visual Studio Code
+2.	Eclipse
+3.	Code::Blocks
+4.	Turbo C/C++
+
+Applications
+•	C++ helps in development of games.
+•	C++ is used to develop GUI based Applications like Adobe
+•	C++ is used to write database management software.
+•	C++ is widely used for rendering purposes in Browsers.
+•	C++ is also used for writing Compilers of very high level programming language.
