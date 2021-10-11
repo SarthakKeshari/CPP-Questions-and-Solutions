@@ -1,3 +1,6 @@
+
+//TO REVERSE A 1-D ARRAY USING C++
+
 #include <iostream>
 using namespace std;
 int  main()
