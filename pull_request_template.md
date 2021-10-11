@@ -1,3 +1,10 @@
+## Choose your form and fill it - 
+### 1. *Form 1(C++ Solution contributors)*
+### 2. *Form 2(C++ Documentation Contributors)*
+
+<br>
+
+# 1) Form 1
 ### Issue Id you have worked upon - 
 Kindly write your answer here
 
@@ -24,3 +31,23 @@ All the conditions should be fulfilled for considering your code for merging -
 
 
 - [] I affirm that I strictly follow contributing guidelines and code of conduct.
+
+<br>
+
+# 2) Form 2
+### Issue Id you have worked upon - 
+Kindly write your answer here
+
+<br>
+
+### Checklist:
+Eg - If your code follow the below guidelines. Kindly change [] to [x]
+
+All the conditions should be fulfilled for considering your Pull Request for merging -
+
+- [] I have performed a self-review of my documentation.<br>
+
+- [] I affirm that I strictly follow contributing guidelines and code of conduct.
+
+
+

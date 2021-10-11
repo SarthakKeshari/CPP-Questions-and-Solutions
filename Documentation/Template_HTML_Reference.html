@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- EnlighterJS Resources !-->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+    <link rel="icon" type="image/ico" href="./logo.png" />
+
+    <title>Documentation Reference</title>
+    <style>
+        body{
+            overflow-x:hidden;
+            line-height: 170%;
+        }
+
+        @media only screen and (max-width: 640px) {
+            .sub-topic, .heading{
+                position: sticky; 
+                top: 80px;
+            }
+        }
+
+        @media only screen and (min-width: 640px) {
+            .sub-topic, .heading{
+                    position: sticky; 
+                    top: 90px;
+                }
+        }
+
+        @media only screen and (max-width: 640px) {
+            .code-section{
+                padding: 0px 10px 0px 10px;
+            }
+        }
+
+        @media only screen and (min-width: 640px) {
+            .code-section{
+                    padding: 0px 100px 0px 100px;
+                }
+        }
+
+        .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a{
+            background-color: lightgray;
+            color: black;
+        }
+
+        .accordion-button{
+            box-shadow:none !important;
+            outline:0px !important;
+        }
+
+        a{
+            text-decoration: none;
+        }
+    </style>
+    
+  </head>
+  <body>
+    <div class="d-flex justify-content-end" style="position: sticky; top: 85vh;"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+        <span class="btn btn-outline-primary p-2 bg-light shadow" style="border-radius: 100% 100% 10% 100%;"><img class="" src="./question.png" alt="" height="25px" width="25px"></span>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+              <h5 class="modal-title" id="exampleModalLabel">Feature - Under Construction</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Recipient:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Message:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send message</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    <nav class="navbar navbar-light bg-light shadow sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><p class="h2 m-0 p-0">CodersArena</p><sup class="h6">(Your C++ partner)</sup></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Documentation Topics</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </form>
+                    <br>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 h6 pe-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Datatypes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                <li><a class="dropdown-item" href="#">Introduction</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">int</a></li>
+                                <li><a class="dropdown-item" href="#">double</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Heading container begins-->
+    <div class="container-fluid mt-4 p-0">
+        <!--Heading general description starts-->
+        
+        <div class="heading accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header outline-none d-grid gap-2 text-center h2 py-1 text-center bg-light" id="headingTwo">
+                <button class="btn collapsed btn-light shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <!--Write topic heading-->
+                    <h3 class="m-0">Heading</h3>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <div class="container py-4">
+            Description, (SOME RANDOM TEXT FOR DEMO) "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            <br>
+            More Description, (SOME MORE RANDOM TEXT FOR DEMO)"Sectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            <br>
+            <br>
+            Condition that need to be met for creating this Documentation are - 
+            <ul>
+                <li>It needs to written in an <span class="h5 text-dark">easy to understand way</span>, like we can say more closer to how we causually teach a topic to a friend in a very layman language.</li>
+                <li>Plagarism should not exceed <span class="h5 text-danger">20%.</span></li>
+                <li>Feel free to create <span class="h5 text-primary">"Ask a query"</span> issue. In case anything is unclear.</li>
+            </ul>
+        </div>
+        <!--Heading general description ends-->
+    </div>
+    <!--Heading container ends-->
+
+
+    <!--You may use the below code in case you wish to create sub-heading-->
+    <!--
+    <div class="container-fluid shadow-sm mt-4 p-0">
+        <div class="heading h4 text-center bg-light">
+            Syntax Reference
+        </div>
+    </div>
+    -->
+
+
+    <!--Main container starts-->
+    <div class="container-fluid mt-4">
+        <!--Topic container starts-->
+        <!--Enter your topicName-subtopicName in id. Example: id="String-substring" -->
+        <div class="topic container-fluid" id="topic-subtopic">
+            <div class="accordion text-left row sub-topic mt-5 mb-4" id="accordionExample">
+                <div class="accordion-item text-left p-0">
+                  <h2 class="accordion-header d-grid text-left gap-2" id="headingTwo">
+                    <button class="accordion-button text-left btn-dark text-light bg-dark collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#topic1_authors" aria-expanded="false" aria-controls="collapseTwo">
+                      <!--Provide topic title here-->
+                      <h5 class="m-0">Topic 1</h5>
+                      <span class="p-1 rounded-circle ms-2 bg-light"><img src="./write.png" alt="" height="25px" width="25px"></span>
+                    </button>
+                  </h2>
+                  <div id="topic1_authors" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body mt-4">
+                        <h6>Authors</h6>
+                        <div class="list-group list-group-flush">
+                            <!-- <a href="{YOUR GITHUB URL HERE}" class="list-group-item list-group-item-action author-names">{YOUR NAME HERE}</a> -->
+                            <a href="https://github.com/SarthakKeshari" class="list-group-item list-group-item-action author-names">Sarthak Keshari</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="subtopic">
+                <!--Provide sub-topic title here-->
+                <p class="h6 mb-0">Pre-requisites</p>
+                <!--Subtopic description starts-->
+                <div class="">
+                    <p>
+                        <ul>
+                            <li> Point 1 </li>
+                            <li> Point 2 </li>
+                        </ul>
+                    <p>
+                </div>
+                <!--Subtopic description ends-->
+            </div>
+            <!--Sub-topic ends-->
+            <br>
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="subtopic">
+                <!--Provide sub-topic title here-->
+                <p class="h6 mb-0">Formal Definition</p>
+                <!--Subtopic description starts-->
+                <div class="">
+                    <p>
+                        <small class="text-danger">
+                        *You can refer an authentic source for this. This line is for developers info. Kindly remove it before creating a PR
+                        </small>
+                    <p>
+                </div>
+                <!--Subtopic description ends-->
+            </div>
+            <!--Sub-topic ends-->
+
+            <!--You may add 2 or 4 br(break) tags to separate two sub-topics if any-->
+            <br>
+
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="subtopic">
+                <!--Provide sub-topic title here-->
+                <p class="h6 mb-0">Easy and Clear Explaination(along with examples)-
+                    </p>
+                <!--Subtopic description starts-->
+                <div class="">
+                    <p>
+                        <small class="text-danger">
+                        *Kindly provide your explaination in a casual language like you explain something to a friend.
+                        Also comments more than 50% lines of the code. This line is for developers info. Kindly remove it before creating a PR
+                        </small>
+                    <p>
+                </div>
+                <!--Subtopic description ends-->
+
+                <!--Code section starts-->
+                <div class="code-section">
+                <!--Question for the below code here-->
+                <b>
+                    Write a program to find sum of two numbers
+                </b>
+<pre class="prettyprint lang-cpp h6">
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    int a, b, c; // Instantiating variables a, b and c
+
+    cout &lt;&lt; "Enter two integers to add\n";  
+    cin &gt;&gt; a &gt;&gt; b;  // Taking user input for a and b
+
+    c = a + b; // Adding a and b and storing the value in variable c
+    cout &lt;&lt;"Sum of the numbers: " &lt;&lt; c &lt;&lt; endl; // Print the sum i.e. value of c   
+
+    return 0;
+}
+</pre>
+                <!--Write caption for the above code section-->
+                <p>Caption for the above code section here.(if any)</p>
+                </div>
+                <!--Code section ends-->
+                <!--Any additional subtopic description starts-->
+                <div class="">
+                    <p>
+                        Additional info here
+                    <p>
+                </div>
+                <!--Any additional subtopic description ends-->
+
+            </div>
+            <!--Sub-topic ends-->
+            <br>
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="subtopic">
+                <!--Provide sub-topic title here-->
+                <p class="h6 mb-0">Solved Questions</p>
+                <small class="text-danger">*Easy to Medium level(Maximum 2) - This line is for developers info. Kindly remove it before creating a PR</small>
+                <!--Subtopic description starts-->
+                <div class="">
+                    <p>
+                        <ul>
+                            <li><b> Question 1 </b></li>
+<pre class="prettyprint lang-cpp h6">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    int a, b, c; // Instantiating variables a, b and c
+
+    cout &lt;&lt; "Enter two integers to add\n";  
+    cin &gt;&gt; a &gt;&gt; b;  // Taking user input for a and b
+
+    c = a + b; // Adding a and b and storing the value in variable c
+    cout &lt;&lt;"Sum of the numbers: " &lt;&lt; c &lt;&lt; endl; // Print the sum i.e. value of c
+
+    return 0;
+}
+</pre>
+<br>
+                            <li><b> Question 2 </b></li>
+<pre class="prettyprint lang-cpp h6">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    int a, b, c; // Instantiating variables a, b and c
+
+    cout &lt;&lt; "Enter two integers to add\n";  
+    cin &gt;&gt; a &gt;&gt; b;  // Taking user input for a and b
+
+    c = a + b; // Adding a and b and storing the value in variable c
+    cout &lt;&lt;"Sum of the numbers: " &lt;&lt; c &lt;&lt; endl; // Print the sum i.e. value of c
+
+    return 0;
+}
+</pre>
+                        </ul>
+                    <p>
+                </div>
+                <!--Subtopic description ends-->
+            </div>
+            <!--Sub-topic ends-->
+            <br>
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="subtopic">
+                <!--Provide sub-topic title here-->
+                <p class="h6 mb-0">Practice Questions</p>
+                <small class="text-danger">*Medium to Hard level(Minimum 2) - This line is for developers info. Kindly remove it before creating a PR</small>
+                <!--Subtopic description starts-->
+                <div class="">
+                    <p>
+                        <ul>
+                            <li> Question 1 </li>
+                            <li> Question 2 </li>
+                        </ul>
+                    <p>
+                </div>
+                <!--Subtopic description ends-->
+            </div>
+            <!--Sub-topic ends-->
+
+        </div>
+        <!--Topic container ends-->
+
+        <br>
+
+        <!--Topic container starts-->
+        <!--Enter your topicName-subtopicName in id. Example: id="String-substring" -->
+        <div class="topic container-fluid" id="topic-subtopic">
+            <div class="accordion text-left row sub-topic mt-5 mb-4" id="accordionExample">
+                <div class="accordion-item text-left p-0">
+                  <h2 class="accordion-header d-grid text-left gap-2" id="headingTwo">
+                    <button class="accordion-button text-left btn-dark text-light bg-dark collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#topic2_authors" aria-expanded="false" aria-controls="collapseTwo">
+                      <!--Provide topic title here-->
+                      <h5 class="m-0">Topic 2</h5>
+                      <span class="p-1 rounded-circle ms-2 bg-light"><img src="./write.png" alt="" height="25px" width="25px"></span>
+                    </button>
+                  </h2>
+                  <div id="topic2_authors" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body mt-4">
+                        <h6>Authors</h6>
+                        <div class="list-group list-group-flush">
+                            <!-- <a href="{YOUR GITHUB URL HERE}" class="list-group-item list-group-item-action author-names">{YOUR NAME HERE}</a> -->
+                            <a href="https://github.com/SarthakKeshari" class="list-group-item list-group-item-action author-names">Sarthak Keshari</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="subtopic">
+                <!--Provide sub-topic title here-->
+                <p class="h6 mb-0">Pre-requisites</p>
+                <!--Subtopic description starts-->
+                <div class="">
+                    <p>
+                        <ul>
+                            <li> Point 1 </li>
+                            <li> Point 2 </li>
+                        </ul>
+                    <p>
+                </div>
+                <!--Subtopic description ends-->
+            </div>
+            <!--Sub-topic ends-->
+            <br>
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="subtopic">
+                <!--Provide sub-topic title here-->
+                <p class="h6 mb-0">Formal Definition</p>
+                <!--Subtopic description starts-->
+                <div class="">
+                    <p>
+                        <small class="text-danger">
+                        *You can refer an authentic source for this. This line is for developers info. Kindly remove it before creating a PR
+                        </small>
+                    <p>
+                </div>
+                <!--Subtopic description ends-->
+            </div>
+            <!--Sub-topic ends-->
+
+            <!--You may add 2 or 4 br(break) tags to separate two sub-topics if any-->
+            <br>
+
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="subtopic">
+                <!--Provide sub-topic title here-->
+                <p class="h6 mb-0">Easy and Clear Explaination(along with examples)-
+                    </p>
+                <!--Subtopic description starts-->
+                <div class="">
+                    <p>
+                        <small class="text-danger">
+                        *Kindly provide your explaination in a casual language like you explain something to a friend.
+                        Also comments more than 50% lines of the code. This line is for developers info. Kindly remove it before creating a PR
+                        </small>
+                    <p>
+                </div>
+                <!--Subtopic description ends-->
+
+                <!--Code section starts-->
+                <div class="code-section">
+                <!--Question for the below code here-->
+                <b>
+                    Write a program to find sum of two numbers
+                </b>
+<pre class="prettyprint lang-cpp h6">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    int a, b, c; // Instantiating variables a, b and c
+
+    cout &lt;&lt; "Enter two integers to add\n";  
+    cin &gt;&gt; a &gt;&gt; b;  // Taking user input for a and b
+
+    c = a + b; // Adding a and b and storing the value in variable c
+    cout &lt;&lt;"Sum of the numbers: " &lt;&lt; c &lt;&lt; endl; // Print the sum i.e. value of c
+
+    return 0;
+}
+</pre>
+                <!--Write caption for the above code section-->
+                <p>Caption for the above code section here.(if any)</p>
+                </div>
+                <!--Code section ends-->
+                <!--Any additional subtopic description starts-->
+                <div class="">
+                    <p>
+                        Additional info here
+                    <p>
+                </div>
+                <!--Any additional subtopic description ends-->
+
+            </div>
+            <!--Sub-topic ends-->
+            <br>
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="subtopic">
+                <!--Provide sub-topic title here-->
+                <p class="h6 mb-0">Solved Questions</p>
+                <small class="text-danger">*Easy to Medium level(Maximum 2) - This line is for developers info. Kindly remove it before creating a PR.</small>
+                <!--Subtopic description starts-->
+                <div class="">
+                    <p>
+                        <ul>
+                            <li><b> Question 1 </b></li>
+<pre class="prettyprint lang-cpp h6">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    int a, b, c; // Instantiating variables a, b and c
+
+    cout &lt;&lt; "Enter two integers to add\n";  
+    cin &gt;&gt; a &gt;&gt; b;  // Taking user input for a and b
+
+    c = a + b; // Adding a and b and storing the value in variable c
+    cout &lt;&lt;"Sum of the numbers: " &lt;&lt; c &lt;&lt; endl; // Print the sum i.e. value of c
+
+    return 0;
+}
+</pre>
+<br>
+                            <li><b> Question 2 </b></li>
+<pre class="prettyprint lang-cpp h6">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    int a, b, c; // Instantiating variables a, b and c
+
+    cout &lt;&lt; "Enter two integers to add\n";  
+    cin &gt;&gt; a &gt;&gt; b;  // Taking user input for a and b
+
+    c = a + b; // Adding a and b and storing the value in variable c
+    cout &lt;&lt;"Sum of the numbers: " &lt;&lt; c &lt;&lt; endl; // Print the sum i.e. value of c
+
+    return 0;
+}
+</pre>
+                        </ul>
+                    <p>
+                </div>
+                <!--Subtopic description ends-->
+            </div>
+            <!--Sub-topic ends-->
+            <br>
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="subtopic">
+                <!--Provide sub-topic title here-->
+                <p class="h6 mb-0">Practice Questions</p>
+                <small class="text-danger">*Medium to Hard level(Minimum 2) - This line is for developers info. Kindly remove it before creating a PR</small>
+                <!--Subtopic description starts-->
+                <div class="">
+                    <p>
+                        <ul>
+                            <li> Question 1 </li>
+                            <li> Question 2 </li>
+                        </ul>
+                    <p>
+                </div>
+                <!--Subtopic description ends-->
+            </div>
+            <!--Sub-topic ends-->
+
+        </div>
+        <!--Topic container ends-->
+
+        <br>
+    </div>
+    <!--Main container ends-->
+    
+
+    <br><br>
+
+    <div class="text-light bg-dark px-2 text-center">
+        Hope the content was helpful
+      <!--Copyright &copy; 2021 <a class="text-light" href="https://github.com/SarthakKeshari">Sarthak Keshari</a>-->  
+    </div>
+  
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
