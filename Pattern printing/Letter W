@@ -1,1 +1,28 @@
+#include <iostream>
 
+using namespace std;
+
+int main()
+{
+    int x,y;
+    for(x=0 ; x<=5 ; x++)
+    {
+        for(y=0 ; y<=22 ; y++)
+        {
+            if((x==y)||(y==(x+1))||((22-y)==x)||((22-y)==(x+1)))
+            {
+                cout << "@";
+            }
+            else if(((x+y)==11)||((y-x)==11))
+            {
+                cout << "#";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << "\n";
+     }
+     return 0;
+}
