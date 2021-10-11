@@ -14,10 +14,10 @@ The first line of each test case contains two space-separated integers N and M.
 The second line contains N space-separated integers A1,A2,…,AN.
 The third line contains M space-separated integers B1,B2,…,BM.
 Output
-For each test case, print a single line containing one integer ― the smallest number of swaps needed to make John Jackson win, or −1 if it is impossible.*/
+For each test case, print a single line containing one integer ― the smallest number of swaps needed to make John Jackson win, or −1 if it is impossible.
 
-/*sample test cases*/
-/*Test Case-1
+sample test cases
+Test Case-1
 Input:
 2
 2 3
@@ -39,62 +39,64 @@ Input:
 1 1 1 3
 
 Output:
--1*/
+-1
+*/
 
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
-int main() {
+int main()
+{
 	int t;
-	cin>>t;
-	while(t--)
+	cin >> t;
+	while (t--)
 	{
-	    int n,m;
-	    cin>>n>>m;
-	    int arr1[n];
-	    int arr2[m];
-	    int sumA=0,sumB=0;
-	    for(int i=0;i<n;i++)
-	    {
-	        cin>>arr1[i];
-	        sumA+=arr1[i];
-	    }
-	    for(int i=0;i<m;i++)
-	    {
-	        cin>>arr2[i];
-	        sumB+=arr2[i];
-	    }	    
-	    int count=0;
-	    while(sumA<=sumB)
-	    {
-	        int maxB=-1;
-	        int minA=int(1e9);
-	        int locA=-1,locB=-1;  //loc is location of Array1 and array2
-	        for(int i=0;i<n;i++)
-	        {
-	            if(arr1[i]<minA)
-	            {
-	                minA=arr1[i];
-	                locA=i;
-	            }
-	        }
-	        for(int i=0;i<m;i++)
-	        {
-	            if(arr2[i]>maxB)
-	            {
-	                maxB=arr2[i];
-	                locB=i;
-	            }
-	        }
-	        if(minA>=maxB)
-	        {
-	            count=-1;
-	            break;
-	        }
-	        count++;
-           swap(arr1[locA],arr2[locB]);
-	        sumA+=maxB-minA;
-	        sumB+=minA-maxB;       
-	    }
-	    cout<<count<<endl;
+		int n, m;
+		cin >> n >> m;
+		int arr1[n];
+		int arr2[m];
+		int sumA = 0, sumB = 0;
+		for (int i = 0; i < n; i++)
+		{
+			cin >> arr1[i];
+			sumA += arr1[i];
+		}
+		for (int i = 0; i < m; i++)
+		{
+			cin >> arr2[i];
+			sumB += arr2[i];
+		}
+		int count = 0;
+		while (sumA <= sumB)
+		{
+			int maxB = -1;
+			int minA = int(1e9);
+			int locA = -1, locB = -1; //loc is location of Array1 and array2
+			for (int i = 0; i < n; i++)
+			{
+				if (arr1[i] < minA)
+				{
+					minA = arr1[i];
+					locA = i;
+				}
+			}
+			for (int i = 0; i < m; i++)
+			{
+				if (arr2[i] > maxB)
+				{
+					maxB = arr2[i];
+					locB = i;
+				}
+			}
+			if (minA >= maxB)
+			{
+				count = -1;
+				break;
+			}
+			count++;
+			swap(arr1[locA], arr2[locB]);
+			sumA += maxB - minA;
+			sumB += minA - maxB;
+		}
+		cout << count << endl;
 	}
 }

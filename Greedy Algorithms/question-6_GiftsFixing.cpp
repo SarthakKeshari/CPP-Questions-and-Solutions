@@ -1,7 +1,7 @@
 //https://codeforces.com/problemset/problem/1399/B
 
-//Gifts Fixing
-/*You have n gifts and you want to give all of them to children. Of course, you don't want to offend anyone, so all gifts should be equal between each other. The i-th gift consists of ai candies and bi oranges.
+/*Gifts Fixing
+You have n gifts and you want to give all of them to children. Of course, you don't want to offend anyone, so all gifts should be equal between each other. The i-th gift consists of ai candies and bi oranges.
 During one move, you can choose some gift 1≤i≤n and do one of the following operations:
 eat exactly one candy from this gift (decrease ai by one);
 eat exactly one orange from this gift (decrease bi by one);
@@ -16,9 +16,9 @@ The first line of the input contains one integer t (1≤t≤1000) — the number
 
 The first line of the test case contains one integer n (1≤n≤50) — the number of gifts. The second line of the test case contains n integers a1,a2,…,an (1≤ai≤109), where ai is the number of candies in the i-th gift. The third line of the test case contains n integers b1,b2,…,bn (1≤bi≤109), where bi is the number of oranges in the i-th gift.
 Output
-For each test case, print one integer: the minimum number of moves required to equalize all the given gifts.*/
+For each test case, print one integer: the minimum number of moves required to equalize all the given gifts.
 
-/*Sample Test Cases
+Sample Test Cases:
 Test Case -1:
 Input:
 3
@@ -58,27 +58,27 @@ int main()
 {
 	int t;
 	cin >> t;
-	while(t--)
+	while (t--)
 	{
-      int a[55],b[55],n;
-		cin>>n;
-		int mina=INT_MAX, minb=INT_MAX;
-		long long ans=0;
-		for(int i=1; i<=n;i++)
+		int a[55], b[55], n;
+		cin >> n;
+		int mina = INT_MAX, minb = INT_MAX;
+		long long ans = 0;
+		for (int i = 1; i <= n; i++)
 		{
-			cin>>a[i];
-			mina=min(mina,a[i]);
-		}	
-		for(int i=1;i<=n;i++)
-		{
-			cin>>b[i];
-			minb=min(minb,b[i]);
+			cin >> a[i];
+			mina = min(mina, a[i]);
 		}
-		for(int i=1;i<=n;i++)
+		for (int i = 1; i <= n; i++)
 		{
-			ans+=1ll*max(a[i]-mina,b[i]-minb);
+			cin >> b[i];
+			minb = min(minb, b[i]);
 		}
-		cout<<ans<<endl;
+		for (int i = 1; i <= n; i++)
+		{
+			ans += 1ll * max(a[i] - mina, b[i] - minb);
+		}
+		cout << ans << endl;
 	}
 	return 0;
 }

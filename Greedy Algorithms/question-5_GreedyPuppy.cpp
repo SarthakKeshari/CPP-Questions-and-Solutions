@@ -1,6 +1,6 @@
 //https://www.codechef.com/problems/GDOG
 
- /*Tuzik is a little dog. But despite the fact he is still a puppy he already knows about the pretty things that coins are. He knows that for every coin he can get very tasty bone from his master. He believes that some day he will find a treasure and have loads of bones.
+/*Tuzik is a little dog. But despite the fact he is still a puppy he already knows about the pretty things that coins are. He knows that for every coin he can get very tasty bone from his master. He believes that some day he will find a treasure and have loads of bones.
 
 And finally he found something interesting. A wooden chest containing N coins! But as you should remember, Tuzik is just a little dog, and so he can't open it by himself. Actually, the only thing he can really do is barking. He can use his barking to attract nearby people and seek their help. He can set the loudness of his barking very precisely, and therefore you can assume that he can choose to call any number of people, from a minimum of 1, to a maximum of K.
 
@@ -10,10 +10,11 @@ Input
 The first line of the input contains an integer T denoting the number of test cases. Each of next T lines contains 2 space-separated integers: N and K, for this test case.
 
 Output
-For each test case output one integer - the maximum possible number of coins Tuzik can get.*/
+For each test case output one integer - the maximum possible number of coins Tuzik can get.
 
-/*sample Test Case
-Test Case-1
+sample Test Cases:
+
+Test Case-1:
 Input:
 2
 5 2
@@ -22,27 +23,28 @@ Output:
 1
 2
 
-Test Case-2
+Test Case-2:
 Input:
 1
 10 3
 1
 */
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
    long long int t;
-   cin>>t;
-   while(t--)
+   cin >> t;
+   while (t--)
    {
-      long long int N,K,ans=0;
-      cin>>N>>K;
-      for(int i=1;i<=K;i++)
+      long long int N, K, ans = 0;
+      cin >> N >> K;
+      for (int i = 1; i <= K; i++)
       {
-         ans=max(ans,N%i);
+         ans = max(ans, N % i);
       }
-      cout<<ans<<endl;
+      cout << ans << endl;
    }
-  return 0;
+   return 0;
 }
