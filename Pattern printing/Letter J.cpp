@@ -1,5 +1,8 @@
+//Write a program to print letter J exactly as shown 
 #include <iostream> //class for handling input and output
+
 using namespace std;
+
 int main()
 {
   int x, y;  //temporary variables to store the row and column number
