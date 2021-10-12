@@ -31,3 +31,5 @@ By creating/claiming the issue or by creating PR(pull request) for this issue yo
 - [x] I affirm that my document is less than **20%** plagarised. <br>
 - [x] If my document is found to be more than **20%** plagarised, my PR(pull request) can be rejected without any prior information. <br>
 - [x] I give the right to maintainers/admins/collaborators of this repository/project/website to amend/add/remove my document wherever/whenever is found necessary. <br>
+
+**For clear details you may visit - #419**
