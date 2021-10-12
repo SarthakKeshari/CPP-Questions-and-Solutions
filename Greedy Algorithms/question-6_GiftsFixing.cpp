@@ -23,8 +23,8 @@ Test Case -1:
 Input:
 3
 3
-3 5 6
-3 2 3
+3 5 6 //ai
+3 2 3 //bi
 5
 1 2 3 4 5
 5 4 3 2 1
@@ -52,7 +52,7 @@ Output:
 7
 */
 
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
@@ -62,21 +62,22 @@ int main()
 	{
 		int a[55], b[55], n;
 		cin >> n;
-		int mina = INT_MAX, minb = INT_MAX;
+		int mina = INT_MAX, minb = INT_MAX; //we intialize the value of mina with max possible value for A and minb as max possible value for B
 		long long ans = 0;
-		for (int i = 1; i <= n; i++)
+		for (int i = 1; i <= n; i++) //it find the minimum value from 1st array
 		{
 			cin >> a[i];
-			mina = min(mina, a[i]);
+			mina = min(mina, a[i]); 
 		}
-		for (int i = 1; i <= n; i++)
+		for (int i = 1; i <= n; i++) //it find the minimum value from 2nd array
 		{
 			cin >> b[i];
 			minb = min(minb, b[i]);
 		}
-		for (int i = 1; i <= n; i++)
+		for (int i = 1; i <= n; i++) //for gift 1 we need to check max operation we need to do. we will subtract value of first element of both the gift with min element and the add the maximum out of it into answer, same goes for all the other gifts. and at the end we will output the sum of all min possible operations
 		{
 			ans += 1ll * max(a[i] - mina, b[i] - minb);
+			//cout<<ans<<" "; //added this line for better understanding of logic, output of ans for 1st test case is 1 3 6   
 		}
 		cout << ans << endl;
 	}

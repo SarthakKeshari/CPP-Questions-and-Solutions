@@ -58,12 +58,12 @@ int main()
 		for (int i = 0; i < n; i++)
 		{
 			cin >> arr1[i];
-			sumA += arr1[i];
+			sumA += arr1[i]; //sum of all element of 1st array
 		}
 		for (int i = 0; i < m; i++)
 		{
 			cin >> arr2[i];
-			sumB += arr2[i];
+			sumB += arr2[i]; //sum of all element of 2nd array
 		}
 		int count = 0;
 		while (sumA <= sumB)
@@ -71,15 +71,15 @@ int main()
 			int maxB = -1;
 			int minA = int(1e9);
 			int locA = -1, locB = -1; //loc is location of Array1 and array2
-			for (int i = 0; i < n; i++)
+			for (int i = 0; i < n; i++) //this loop is finding the min element and location of min element in first array
 			{
-				if (arr1[i] < minA)
+				if (arr1[i] < minA) 
 				{
 					minA = arr1[i];
 					locA = i;
 				}
 			}
-			for (int i = 0; i < m; i++)
+			for (int i = 0; i < m; i++) //this loop is finding the max element and location of max element in second array
 			{
 				if (arr2[i] > maxB)
 				{
@@ -87,13 +87,13 @@ int main()
 					locB = i;
 				}
 			}
-			if (minA >= maxB)
+			if (minA >= maxB) //if min element of first array is greater than maximum element of second array then we simply return -1 
 			{
 				count = -1;
 				break;
 			}
-			count++;
-			swap(arr1[locA], arr2[locB]);
+			count++; //we are increamenting the value of count as the number of times we swap and it indicates the number of operation we need to perform 
+			swap(arr1[locA], arr2[locB]); //swap the elements if sum of A is less than sum of B
 			sumA += maxB - minA;
 			sumB += minA - maxB;
 		}

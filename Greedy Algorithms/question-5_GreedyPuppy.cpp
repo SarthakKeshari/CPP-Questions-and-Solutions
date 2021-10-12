@@ -30,19 +30,19 @@ Input:
 1
 */
 
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
    long long int t;
-   cin >> t;
+   cin >> t; //number of test cases
    while (t--)
    {
-      long long int N, K, ans = 0;
-      cin >> N >> K;
+      long long int N, K, ans = 0; 
+      cin >> N >> K; //N is the total number of people and K is the max number of people Tuzik can call
       for (int i = 1; i <= K; i++)
       {
-         ans = max(ans, N % i);
+         ans = max(ans, N % i); //we divide the coin in such a way that everyone will get the equal number of coins and the number is maximum, so we start dividing from 1 and at some point we will reach the correct number that is maximum among all the divisions and the number of coins would be equal.
       }
       cout << ans << endl;
    }

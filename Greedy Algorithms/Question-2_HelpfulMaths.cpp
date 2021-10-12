@@ -25,15 +25,15 @@ Output:
 1+1+1+3+3
 */
 
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-    char m[150];
+    string m;
     int i, l, n1 = 0, n2 = 0, n3 = 0;
-    gets(m);
-    l = strlen(m);
-    for (i = 0; i < l; i++)
+    cin>>m;
+    l = m.length();
+    for (i = 0; i < l; i++) //here we are calculating number of 1's, 2's and 3's 
     {
         if (m[i] == '1')
         {
@@ -48,14 +48,14 @@ int main()
             n3++;
         }
     }
-    for (i = 0; i < n1; i++)
+    //after calculating the numbers, we simply print out the number of times it is present so loop will iterate from 0 to n1 and so on for every element
+
+    for (i = 0; i < n1; i++) //this will print 1,2,3 and '+' simultaneously 
     {
         cout << '1';
-        if ((n2 == 0 && n3 == 0) && i == n1 - 1)
-        {
-            cout << endl;
-        }
-        else
+        if ((n2 == 0 && n3 == 0) && i == n1 - 1) 
+        {}
+        else //until i is not equal to 0 print '+' and when i becomes equal to n1 it will go to new loop similarly with pther two cases
         {
             cout << '+';
         }
@@ -64,9 +64,7 @@ int main()
     {
         cout << '2';
         if (i == n2 - 1 && n3 == 0)
-        {
-            cout << endl;
-        }
+        {}
         else
         {
             cout << '+';
@@ -76,9 +74,7 @@ int main()
     {
         cout << '3';
         if (i == n3 - 1)
-        {
-            cout << endl;
-        }
+        {}
         else
         {
             cout << '+';

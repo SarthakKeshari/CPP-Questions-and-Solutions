@@ -36,11 +36,11 @@ int main()
    int ans = 0;
    for (int i = 0; i < n; i++)
    {
-      if (arr[i] + k <= 5)
+      if (arr[i] + k <= 5) //if sum is less than 5 then player would be able to play and we increament the vlaue of answer
       {
          ans++;
       }
    }
-   cout << ans / 3 << endl;
+   cout<< ans / 3 << endl; //for team of 3 members
    return 0;
 }

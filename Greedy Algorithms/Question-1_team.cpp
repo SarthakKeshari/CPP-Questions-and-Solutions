@@ -29,18 +29,18 @@ Output:
 1
 */
 
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-  int t;
-  cin >> t;
-  int count = 0;
+  int t; 
+  cin >> t; //t is input as number of problem in the contest
+  int count = 0; //first we initialize count as 0
   while (t--)
   {
-    int P, V, T;
-    cin >> P >> V >> T;
-    if (P + V + T >= 2)
+    int P, V, T; 
+    cin >> P >> V >> T; //we take input of all the three friends to check how many of them will be able to solve the problem
+    if (P + V + T >= 2) //we have boolean values either 0 or 1, so we add them and if the sum is greater than 0 then we increment the count
       count++;
   }
   cout << count << endl;
