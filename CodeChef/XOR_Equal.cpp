@@ -1,11 +1,25 @@
+/**
+You are given an array A consisting of N integers and an integer X. Your goal is to have as many equal integers as possible in the array. 
+To achieve this goal, you can do the following operation:
+Choose an index i (1 ≤ i ≤ N) and set Ai = Ai ⊕ X, where ⊕ denotes the bitwise xor operation
+Find the maximum number of equal integers you can have in the final array and the minimum number of operations to obtain these many equal integers.
+*/
+
+// link to the problem -- https://www.codechef.com/problems/PALINT
 
 
-//  Property of XOR used
-//  A xor B xor B = A   i.e., number A xored with B twice results in itself 
-//  A xor A = 0
-//  A xor 0 = A
+/*******************************************************************************************************************************************************/
 
 
+/**
+  Property of XOR used
+  A xor B xor B = A   i.e., number A xored with B twice results in itself 
+  A xor A = 0
+  A xor 0 = A
+*/
+
+
+//  solution in C++
 #include<bits/stdc++.h>
 using namespace std;
 
