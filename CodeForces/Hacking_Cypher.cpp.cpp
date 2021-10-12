@@ -1,3 +1,8 @@
+// Polycarpus participates in a competition for hacking into a new secure messenger. He's almost won.
+// Having carefully studied the interaction protocol, Polycarpus came to the conclusion that the secret key can be obtained if he properly cuts the public key of the application into two parts. The public key is a long integer which may consist of even a million digits!
+// Polycarpus needs to find such a way to cut the public key into two nonempty parts, that the first (left) part is divisible by a as a separate number, and the second (right) part is divisible by b as a separate number. Both parts should be positive integers that have no leading zeros. Polycarpus knows values a and b.
+
+// Help Polycarpus and find any suitable method to cut the public key.
 #include<bits/stdc++.h>
 using namespace std;
 
