@@ -1,0 +1,69 @@
+                        Steps to install VsCode For C++ :-
+
+Step 1 - Make sure your computer is ready for Visual Studio
+Check the system requirements. These requirements help you know whether your computer supports Visual Studio 2019.
+ 
+Step 2: Download Visual studio code.
+Type VsCode on your browser and click on the first link of the page, or just 
+
+Step 3: Install Vscode
+This step is easy, accept the agreement and click next. Make sure to enable the “Add to Path” option.  
+click next and install.
+
+
+Step 4: Download extensions for visual studio code.
+Once you have installed visual studio code, now its time to install some extensions. Click on the button where red arrow is pointing in above image.  
+
+Install the Following extensions: -
+1.C/C++ (Microsoft)  
+2.Code runner
+3. Prettier
+ 
+Now we have successfully installed code editor but we need a compiler to compile and output our code, for that we will be installing MinGW.
+
+Step 5: Download MinGW
+Type mingw on google and choose following first link as shown in the image below or Click Here. 
+Now click download.
+ 
+
+
+Step 6: Install MinGW
+Open the installer, you should see something like the below image. Click on install and choose your directory where the software should be installed and click continue.  
+ 
+After installing, click on continue and right click on every checkbox and choose mark for installation.
+
+ 
+Now click Installation on top left corner and then choose Apply Changes. You should see something like shown in the image below. 
+
+And then click on Apply.
+Once you complete the installation, you should see something like the image below.
+ 
+Click close and close the installer.
+
+Step 7: Copy Bin Path
+Now open 'This PC' and open 'local Disk C' you should see mingw file and click on bin folder.
+
+Now you have to copy the folder destination which is above the page as shown below.
+ 
+Now right click and copy or just press 'Ctrl + C' on your keyboard.
+
+Step 8: Environment Variables
+Open 'Control Panel' from your start menu and click on System. If you don't find system on your control panel just type 'system' on the search bar which you can find in top right corner of the control panel. 
+Click on Advanced system setting on right side you should see system properties as shown in the image below 
+
+
+Now click on the path in system variable and click on edit as shown in the image below. 
+
+Now click on new and paste the bin path that we have copied in the previous step and then click Ok.
+
+
+Now click ok till there are no pop ups left.
+
+Step 9: Let's check if MinGW has been successfully installed or not.
+Open Command Prompt and type the following command
+g++ --version
+
+ 
+And if you see something like the image above, voila! we did it.
+----------------------------------------------------------------------------
+Congratulations!! You have successfully Installed Vscode in your system.
