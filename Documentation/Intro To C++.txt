@@ -27,6 +27,7 @@ IDE
 2.	Eclipse
 3.	Code::Blocks
 4.	Turbo C/C++
+5.	Dev C++
 
 Applications
 •	C++ helps in development of games.
