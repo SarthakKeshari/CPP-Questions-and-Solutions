@@ -31,7 +31,6 @@ Sample Output 2 :
 10 20 30 40 
 */
 
-
 #include <iostream>
 using namespace std;
 // Defining Node Class
@@ -47,15 +46,20 @@ public:
     }
 };
 
-// Taking Input 
+// Taking Input
 Node *takeinput()
 {
     int data;
+
     cin >> data;
+
     Node *head = NULL, *tail = NULL;
+
     while (data != -1)
     {
+
         Node *newnode = new Node(data);
+
         if (head == NULL)
         {
             head = newnode;
@@ -74,9 +78,12 @@ Node *takeinput()
 // Function to Print the List
 void print(Node *head)
 {
+    // intializing temp node with head address
     Node *temp = head;
+    // iterating with the help of temp node
     while (temp != NULL)
     {
+        // printing list data
         cout << temp->data << " ";
         temp = temp->next;
     }
@@ -100,9 +107,10 @@ void print(Node *head)
 
 *****************************************************************/
 
-Node *evenAfterOdd(Node *head)
+Node *oddAfterEven(Node *head)
 {
     //write your code here
+    // Corner case
     if (head == NULL)
         return head;
 
@@ -112,29 +120,40 @@ Node *evenAfterOdd(Node *head)
     Node *evenh = NULL;
     Node *event = NULL;
 
+    //Iterating over the linked list
     while (head != NULL)
     {
         // checking if node is even or odd
+        // if odd
         if (head->data % 2 != 0)
         {
+            // Checking if odd head and tail is null or not
+            // if null then intializing odd head and tail to the list head;
             if (oddh == NULL && oddt == NULL)
             {
                 oddh = head;
                 oddt = head;
             }
+
+            // else we will just add the address into tail and move forward the odd tail node
             else
             {
                 oddt->next = head;
                 oddt = oddt->next;
             }
         }
+        // if even
         else
         {
+            // Checking if even head and tail is null or not
+            // if null then intializing even head and tail to the list head;
             if (evenh == NULL && event == NULL)
             {
                 evenh = head;
                 event = head;
             }
+
+            // else we will just add the address into tail and move forward the even tail node
             else
             {
                 event->next = head;
@@ -144,33 +163,38 @@ Node *evenAfterOdd(Node *head)
         head = head->next;
     }
 
-    // merging both linked list 
+    // checking if only even element present
     if (oddh == NULL)
     {
         event->next = NULL;
         return evenh;
     }
+    // check if only odd element present
     if (evenh == NULL)
     {
         oddt->next = NULL;
         return oddh;
     }
+    // if both elements our present then
+    // joining the odd tail to even head
     oddt->next = evenh;
     event->next = NULL;
 
+    // returning the odd address
     return oddh;
 }
 
 int main()
 {
     int t;
+    // taking test case input
     cin >> t;
     while (t--)
     {
+        // taking list input
         Node *head = takeinput();
-        head = evenAfterOdd(head);
+        head = oddAfterEven(head);
         print(head);
     }
     return 0;
 }
-
