@@ -1,0 +1,65 @@
+                                                                     Steps to install Turbo c++:-
+
+
+1. Download Turbo C++
+
+There are many sites from where you can download Turbo C++.
+Here I am using this site so you can just paste it in your browser:-
+
+(
+https://developerinsider.co/download-turbo-c-for-windows-7-8-8-1-and-windows-10-32-64-bit-full-screen/
+)
+
+Click on download button to get the zip file as shown in picture below.
+
+(1.png)
+
+2. Install Turbo C++
+
+Open the Zip file and click on the installer.
+(2.png)
+
+Click on the next and Select yes if ask for any permission.
+(3.png)
+
+Click on finish to close the Pop-UP and congrats thats it!!
+You have successfully installed Turbo C++ in your system.
+
+(4.png)
+
+3. How to use Turbo C++
+
+Goto C folder and open the "TURBOC3" folder.
+(5.png)
+
+
+Open the bin folder. All your codes will be saved here.
+(6.png)
+
+
+Now, Open the Turbo C++ application by navigating to the TurboC++ folder or by using the shortcut created in your desktop.
+(7.png)
+
+If you want run turbo c++ on full screen simply click on the button "Run Turbo C++ "OR" If you do not want full-screen mode uncheck the "Full screen mode" check box and click on the button "Start Turbo C++"
+(8.png)
+
+And voila!!! We did it. 
+(9.png)
+
+
+4.Write your first code!
+
+Type the following code as shown in the picture below.
+(10.png)
+
+Press "Ctrl+F9" or goto "Run" option in the upper toolbar and run the code.
+(11.png)
+-------------------------------------------------------------------------------
+
+Congrats! You have Successfully installed turbo C++ and run your code.
+
+
+
+
+
+
