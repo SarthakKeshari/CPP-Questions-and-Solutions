@@ -1,14 +1,14 @@
 //C++ program to print the below pattern :-
 
 /*
-@@       ## 
+@@       ##
  @@     ##
   @@   ##
    @@ ##
     @@@
    ## @@
   ##   @@
- ##     @@ 
+ ##     @@
 ##       @@
 */
 
@@ -26,10 +26,10 @@ for(row=0; row<9; row++)       // here 9 is the total no. of rows.
      if(row==4 && coloumn==4)
     cout << "@@@";            // printing @@@ in the middle of the letter when rows=4 & coloumns=4
 
-    else if(row==coloumn)     
+    else if(row==coloumn)          // prints the required characters when number of rows equals number of columns
     cout << "@@";
 
-   else if((row+coloumn)==8)
+   else if((row+coloumn)==8)      //  prints the required characters when number of rows + number of columns equals (total rows-1)
    cout << "##";
 
     else
