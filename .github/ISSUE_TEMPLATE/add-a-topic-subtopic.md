@@ -21,7 +21,7 @@ Write your name here
 
 <br><br>
 
-Templates for reference - [.txt](https://github.com/SarthakKeshari/CPP-Questions-and-Solutions/blob/main/Documentation/Template_TXT_Reference.md) and [.html](https://github.com/SarthakKeshari/CPP-Questions-and-Solutions/blob/main/Documentation/Template_HTML_Reference.html)
+### Templates for reference - [.txt](https://github.com/SarthakKeshari/CPP-Questions-and-Solutions/blob/main/Documentation/Template_TXT_Reference.md) and [.html](https://github.com/SarthakKeshari/CPP-Questions-and-Solutions/blob/main/Documentation/Template_HTML_Reference.html)
 #### For contributors opting for .txt are requested to visit .html too in order to get clear idea what content to write and how it will be diplayed on the webpage.
 
 <br>
