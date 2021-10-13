@@ -9,14 +9,14 @@ int main(){
     
     //t here is used for defining the number of test cases
     int t;
-    cout<<"Enter the number of times you want to run: "<<endl<<"  t ";
+    cout<<"Enter the number of times you want to run: "<<endl<<"  t:";
     cin>>t;
     while(t--){
         int n;
-        cout<<"Enter the length of the array: "<<endl<<"  n ";
+        cout<<"Enter the length of the array: "<<endl<<"  n:";
         cin>>n;
         int arr[n];
-        cout<<"Enter "<<n<<"numbers for the array: "<<endl<<"  ";
+        cout<<"Enter "<<n<<" numbers for the array: "<<endl<<"  ";
         //taken input from the user for the array
         for(int i=0;i<n;i++){
             cin>>arr[i];
