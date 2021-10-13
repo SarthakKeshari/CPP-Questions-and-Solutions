@@ -1,5 +1,5 @@
 
-#Quaestion
+//Quaestion
 
 /*You are given a prime p and a matrix M with N rows (numbered 1 through N) and N columns (numbered 1 through N). For each row r and column c, the cell in row r and column c can either be empty or contain an integer Mr,c. Initially, all cells are empty.
 
@@ -25,7 +25,7 @@ The above matrix is not a curious matrix for p=5, since the determinant of the o
 
 
 
-#Solution
+//Solution
 
 
 
@@ -44,7 +44,7 @@ const long long MOD2 = 1000000007;
 
 
 
-#function for finding mod and then returing the result to the calling fuction
+//function for finding mod and then returing the result to the calling fuction
 
 
 ll mod_power(ll a, ll b, ll MOD) {
@@ -58,7 +58,7 @@ ll mod_power(ll a, ll b, ll MOD) {
 }
 
 
-#class which contins function and data members required for the use in the main fuction
+//class which contins function and data members required for the use in the main fuction
 
 class DynamicConnectivity {
     void __dfs(int v, int l, int r, vll& res) {
@@ -78,7 +78,7 @@ class DynamicConnectivity {
         answer = last_ans;
     };
 
-   #nodes and query that are to be executed are declared in the public section for easy access
+ //nodes and query that are to be executed are declared in the public section for easy access
     
 public:
     int size_nodes;
@@ -103,7 +103,7 @@ public:
     vector<vector<Query>> tree;
     
     
-#fuction of dynamicconnectivity which initialises and check for curious maxtrix
+//fuction of dynamicconnectivity which initialises and check for curious maxtrix
     DynamicConnectivity(int n = 600000, int q = 300000) {
         size_nodes = n;
         size_query = q;
@@ -119,7 +119,7 @@ public:
         factor = vector<ll>(n, 1);
         comp_count = n;
     }
-#fuction of change which overwrite the the old values of the matrix if the condition of curious matrix found to be true
+//fuction of change which overwrite the the old values of the matrix if the condition of curious matrix found to be true
     
     void change(ll& object, ll value) {
         saved_object[save_ptr] = &object;
@@ -144,7 +144,7 @@ public:
             return 1;
         return 1ll*factor[x]*find_factor(parent[x])%MOD1;
     }
-#fuction of merge for compiling the the matrix element and and calling change function for computing
+//fuction of merge for compiling the the matrix element and and calling change function for computing
     void merge(int x, int y, ll ratio) {
         ll factor_x = find_factor(x);
         ll factor_y = find_factor(y);
@@ -205,7 +205,7 @@ int main() {
     cin >> n >> q >> MOD1;
     map<pll, ll> last;
     
-    #call of dynamicconectiving function
+    //call of dynamicconectiving function
     
     DynamicConnectivity dsu(n + n, q);
     vector<DynamicConnectivity::Query> queries;
