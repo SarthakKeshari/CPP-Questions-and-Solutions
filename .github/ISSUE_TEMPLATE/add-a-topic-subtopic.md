@@ -13,7 +13,7 @@ Write your answer here
 ### Enter sub-topic you want to work upon(eg- for loop, pow())
 Write your answer here
 
-### Kindly mention your real name and document type that you will submit (**Choices available** -> .txt or .html) while claiming the issue.
+### While claiming the issue, kindly mention your real name and document type that you will submit (**Choices available** -> .txt or .html).
 
 <br><br>
 
