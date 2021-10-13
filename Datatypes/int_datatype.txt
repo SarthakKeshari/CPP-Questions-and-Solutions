@@ -1,0 +1,31 @@
+Datatype - int 
+-	Anushka Srivastava
+int is a primitive datatype. It stores integer values. The size of int is 4 bytes i.e. 32 bits and the range is -2147483648 (-2^31) to 2147483647(2^31-1).
+Example
+Declaring a value 
+int a = 2230
+
+
+Write a program to add to integer numbers.
+
+public class Solution
+{
+ 	public static void main(String[] args) {
+	    int n1 = 10;
+	    int n2 = 20;
+	    int sum = n1+n2;
+		System.out.println("Sum of two integer number : "+sum);
+	}
+}
+
+Output
+Sum of two integer number : 30
+
+In the above program you can see that we have taken 2 variables of int datatype i.e. n1 , n2 which store integer values , 10 , 20. Then, we have added the two integer value and store it in sum which is also of integer type.
+
+signed int 
+It can store signed integers i.e. the values stored can be positive , negative or zero. The range of signed int is  -2147483648 (-2^31) to 2147483647(2^31-1).
+
+unsigned int
+It can store unsigned integers i.e. the values can be positive or zero but it can never be negative. The range of unsigned int is  0 to 2147483647.
+
