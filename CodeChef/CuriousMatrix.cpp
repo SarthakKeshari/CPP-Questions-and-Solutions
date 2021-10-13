@@ -42,6 +42,11 @@ typedef pair<long long, long long> pll;
 long long MOD1;
 const long long MOD2 = 1000000007;
 
+
+
+#function for finding mod and then returing the result to the calling fuction
+
+
 ll mod_power(ll a, ll b, ll MOD) {
     ll cumulative = a, result = 1;
     for (; b > 0; b /= 2) {
@@ -51,6 +56,9 @@ ll mod_power(ll a, ll b, ll MOD) {
     }
     return result;
 }
+
+
+#class which contins function and data members required for the use in the main fuction
 
 class DynamicConnectivity {
     void __dfs(int v, int l, int r, vll& res) {
@@ -70,6 +78,8 @@ class DynamicConnectivity {
         answer = last_ans;
     };
 
+   #nodes and query that are to be executed are declared in the public section for easy access
+    
 public:
     int size_nodes;
     int size_query;
@@ -91,7 +101,9 @@ public:
         }
     };
     vector<vector<Query>> tree;
-
+    
+    
+#fuction of dynamicconnectivity which initialises and check for curious maxtrix
     DynamicConnectivity(int n = 600000, int q = 300000) {
         size_nodes = n;
         size_query = q;
@@ -107,7 +119,8 @@ public:
         factor = vector<ll>(n, 1);
         comp_count = n;
     }
-
+#fuction of change which overwrite the the old values of the matrix if the condition of curious matrix found to be true
+    
     void change(ll& object, ll value) {
         saved_object[save_ptr] = &object;
         saved_value[save_ptr] = object;
@@ -131,7 +144,7 @@ public:
             return 1;
         return 1ll*factor[x]*find_factor(parent[x])%MOD1;
     }
-
+#fuction of merge for compiling the the matrix element and and calling change function for computing
     void merge(int x, int y, ll ratio) {
         ll factor_x = find_factor(x);
         ll factor_y = find_factor(y);
@@ -191,6 +204,9 @@ int main() {
     ll n, q;
     cin >> n >> q >> MOD1;
     map<pll, ll> last;
+    
+    #call of dynamicconectiving function
+    
     DynamicConnectivity dsu(n + n, q);
     vector<DynamicConnectivity::Query> queries;
     queries.reserve(q);
