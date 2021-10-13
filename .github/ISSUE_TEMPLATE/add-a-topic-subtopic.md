@@ -13,11 +13,7 @@ Write your answer here
 ### Enter sub-topic you want to work upon(eg- for loop, pow())
 Write your answer here
 
-### Document type that you will submit (**Choices available** -> .txt or .html) - 
-Write your answer here
-
-### Enter your name(Article author) - 
-Write your name here
+### Kindly mention your real name and document type that you will submit (**Choices available** -> .txt or .html) while claiming the issue.
 
 <br><br>
 
