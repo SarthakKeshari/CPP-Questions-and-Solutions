@@ -1,0 +1,78 @@
+Introduction to push_back() in C++ 
+                                -Divyansh Singh
+
+Introduction
+    push_back() is a function from vector class in C++. It basically pushes any element at the end of any container. Any new element is added to the vector from back hence increasing size of vector one by one. There is no return type of push_back().
+    Time complexity for this operation is constant, as it does not require any manipulation with internal components or pointer.
+
+Advantages
+    - It never throws an exception.
+    - Since there is no complex operation done by this function there is no return type.
+    - Constant time complexity.
+    - push_back paramenter supports different data types including int, string, float, and 2D vector.
+
+Syntax
+    <vectorName>.push_back(<argument>)
+
+Parameters
+    The only parameter that is needed to be passes is the value that is needed to append at the last of the container, i.e., push_back(element).
+
+Example 1: 
+    Question : 
+        Given a string with value "Hello". Concatenate "World" to it using push_back.
+    Solution :
+        #include <bits/stdc++.h>
+        using namespace std;
+        int main()
+        {
+            string hello = "Hello";
+            string world = "World";
+            for(int i = 0; world[i] != '\0'; i++)
+            {
+                hello.push_back(world[i]);
+            }
+            cout<<hello;
+            return 0;
+        }
+    Output :
+        HelloWorld
+
+
+Example 2 : 
+    Question :
+        Given a string variable  with value "Hello" and a string variable with value "World". Concatenate these two strings into a third variable using push_back.
+    Solution :
+        #include <bits/stdc++.h>
+        using namespace std;
+        int main()
+        {
+            string result = "";
+            string hello = "Hello";
+            string world = "World";
+            for(int i = 0; hello[i] != '\0'; i++)
+            {
+                result.push_back(hello[i]);
+            }
+            for(int i = 0; world[i] != '\0'; i++)
+            {
+                result.push_back(world[i]);
+            }
+            cout<<result;
+            return 0;
+        }
+    Output :
+        HelloWorld
+
+Practice Questions
+    Question 1 :
+        Given a string "Pushback", concatenate the reverse of the string using push_back, i.e., output should look like "PushbackkcabhsuP" using push_back.
+    Question 2 :
+        Given two arrays of firstname and lastname, concatenate them to form full name and return an array of fullnames using push_back.
+        firstnames = ["Divyansh", "Shivansh", "Nishant"]
+        lastnames = ["Singh", "Kumar", "Yadav"]
+        output : ["Divyansh Singh", "Shivansh Kumar", "Nishant Yadav"]
+
+
+
+
+
