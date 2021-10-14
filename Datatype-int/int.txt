@@ -1,0 +1,57 @@
+Main Topic – Data Types
+Sub-topic - int
+
+
+Formal Definition
+•	It is a primitive datatype. 
+•	It stores integer values. 
+•	The size of int is 4 bytes i.e. 32 bits. 
+•	The range is -2147483648 (-2^31) to 2147483647(2^31-1).
+
+
+Easy and Clear Explanation (along with examples)
+Example
+Declaring a value 
+int a = 2230
+Here we have taken a is a variable of int type which store integer values like 2230.
+
+Solved Questions(Maxiumum 2)
+
+Write a program to add to integer numbers.
+public class Solution
+{
+ 	public static void main(String[] args) {
+	    int n1 = 10;
+	    int n2 = 20;
+	    int sum = n1+n2;
+		System.out.println("Sum of two integer number : "+sum);
+	}
+}
+
+Output
+Sum of two integer number : 30
+
+Write a program to multiply two integer numbers.
+public class Solution
+{
+ 	public static void main(String[] args) {
+	    int n1 = 2;
+	    int n2 = 3;
+	    int mul = n1*n2;
+		System.out.println("Multiplication of two integer numbers : "+mul);
+	}
+}
+
+Output
+Multiplication of two integer numbers : 6
+
+Practice Questions(Minimum 2)
+*Medium to Hard level - This line is for developers info. Kindly remove it before creating a PR
+•	Write a program to check whether a number is a Palindrome number or not?
+A palindromic number is a number that remains the same when its digits are reversed.
+E.g. 121
+•	Write a program to check whether a number is a Armstrong number or not?
+Armstrong number is a number that is equal to the sum of cubes of its digits.
+E.g.  153
+
+-Anushka Srivastava
