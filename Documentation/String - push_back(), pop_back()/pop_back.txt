@@ -1,0 +1,46 @@
+Introduction to pop_back() in C++ 
+                                -Divyansh Singh
+
+Introduction
+    pop_back() is a function from vector class in C++. It basically removes any element from the end of any container. Whem element is removed from the container from back hence decreasing size of container one by one. There is no return type of pop_back().
+    Time complexity for this operation is constant, as it does not require any manipulation with internal components or pointer.
+
+Advantages
+    - It never throws an exception.
+    - Since there is no complex operation done by this function there is no return type.
+    - Constant time complexity.
+
+Syntax
+    <vectorName>.pop_back()
+
+Parameters
+    No parameters are required i.e., pop_back()
+
+Example 1: 
+    Question : 
+        Given a string with value "Hello World!". Remove "!" from it using pop_back.
+    Solution :
+        #include <bits/stdc++.h>
+        using namespace std;
+        int main()
+        {
+            string str = "Hello World!";
+            str.pop_back();
+            cout<<str;
+            return 0;
+        }
+    Output :
+        Hello World
+
+Practice Questions
+    Question 1 :
+        Given a string "PopbackkcabpoP", remove the reverse of the string using pop_back, i.e., output should look like "Popback" using pop_back.
+    Question 2 :
+        Given an array of fullnames, remove surnames from the fullnames and return an array of firstnames using pop_back.
+        fullnames : ["Divyansh Singh", "Shivansh Kumar", "Nishant Yadav"]
+        output = ["Divyansh", "Shivansh", "Nishant"]
+
+
+
+
+
