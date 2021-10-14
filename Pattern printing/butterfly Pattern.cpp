@@ -20,8 +20,8 @@ int main()
     cout<<endl;                           // line change
     }
     for(int i=n;i>=1;i--){                //used for loop for *
-        for(int j=i;j>=1;j--){            //printed *
-           cout<<"*"; 
+        for(int j=i;j>=1;j--){
+           cout<<"*";                     //printed *
         }
         int space=2*n-2*i;
         for(int j=space;j>=1;j--){        // used for loop for Space
