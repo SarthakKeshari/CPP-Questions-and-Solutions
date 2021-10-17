@@ -1,0 +1,94 @@
+Main topic : String
+Sub- topic : Getline()
+
+Formal Definition:
+
+The C++ getline() is a standard library function that is used to read a string or a line from an input stream. 
+It is a part of the <string> header. 
+The getline() function extracts characters from the input stream and appends it to the string object until the delimiting character is encountered. 
+While doing so the previously stored value in the string object str will be replaced by the input string if any.
+
+Easy and Clear Explanation (along with examples):
+
+Example 1:
+
+string s ;  //Declaring a String data type variable 
+cout << "Enter a String : " ;  // Printing statement in CPP
+getline(cin , s);   // Dynamic Initialization of String data type variable and Input Statement for String data type
+
+Example 2:
+
+	string str; //string declaration
+cout << "Please enter your name: \n"; 
+	getline(cin, str); // storing your name in str
+	cout << "Hello, " << str    
+		<< " welcome to Coders Arena !\n"; // Printing:-  Hello {your name} Welcome to Code Arena! 
+
+	
+
+Solved Questions:
+
+1.Write a C++ program that take your name as input and display it.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  string fullName;
+  cout << "Type your full name: ";
+  getline (cin, fullName);
+  cout << "Your name is: " << fullName;
+  return 0;
+}
+
+Input:
+Type your full name: coder
+
+Output:
+Your name is: coder
+
+
+2. Write a C++ Program to Remove Spaces from a String.
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+ 
+int main(){
+    char input[100], output[100];
+    int i, j;
+     
+    cout << "Enter a string \n";
+    cin.getline(input, 500);
+     
+    for(i = 0, j = 0; input[i] != '\0'; i++){
+        if(input[i] != ' '){
+        // If current character is not a space character, 
+        // copy it to output String
+            output[j++] = input[i];
+        }
+    }
+    output[j] = '\0';
+      
+    cout << "Input String: " << input << endl;
+    cout << "String without spaces : " << output;
+      
+    return 0;
+}
+
+Input:
+Enter a string 
+I love C++ programming
+
+output:
+Input String: I love C++ programming
+String without spaces : IloveC++programming
+
+
+
+Practice Question:
+
+1. Write a C++ programme to use getline to input three students names and display them.
+
+2.Write a C++ program that uses getline to read  input with blank lines.
