@@ -1,0 +1,31 @@
+Main Topic – Data Types
+Sub-topic – string
+
+Formal Definition
+•	It is a non-primitive datatype.
+•	It is used for storing sequence of characters enclosed within double quotes.
+•	One must include <string> library, header file in the source code to use strings.
+Easy and Clear Explanation (along with examples)
+string s = “Happy Birthday”
+Here we have taken s as a string datatype which stores Happy Birthday as sequence of characters within double quotes.
+Solved Questions
+Write a program to print a string.
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	string s = “Feeling Cool”;
+	cout << s;
+	return 0;
+}
+
+Output
+
+Feeling Cool
+Practice Questions
+Write a program to check whether it is a palindrome string or not.
+Write a program to multiply 2 strings.
+
+							-Anushka Srivastava
