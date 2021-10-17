@@ -1,3 +1,5 @@
+// Make a butterfly pattern
+
 #include <iostream>
 using namespace std;
 
