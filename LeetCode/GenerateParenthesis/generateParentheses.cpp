@@ -7,6 +7,7 @@ public:
     vector<string> result;
     vector<string> generateParenthesis(int n) {
         helper("", n, 0, 0);
+        // Returning the final answer
         return result;
     }
     void helper(string s, int n, int l, int r){
@@ -22,6 +23,7 @@ public:
 //Driver code starts.
 int main(){
     Solution s;
+    //calling method generateParentheses() with number
     s.generateParenthesis(4);
 
     return 0;
