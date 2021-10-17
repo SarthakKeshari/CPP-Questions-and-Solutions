@@ -1,0 +1,60 @@
+
+Main Topic – Data Types
+Sub-topic - double
+
+Formal Definition
+•	It is a primitive datatype.
+•	It is used to store decimal values.
+•	The size of double is 8 bytes i.e.  64 bits.
+•	The range of double is 1.7e-308 to 1.7e+308
+
+
+Easy and Clear Explanation (along with examples)
+Example
+
+double n = 22.3
+
+Here we have taken n as a variable of double datatype which store decimal values like 22.3 .
+
+
+Solved Questions(Maximum 2)
+
+Write a program to subtract to decimal numbers.
+#include <iostream>
+using namespace std;
+int main()
+{
+double n1, n2, sub;
+n1 = 22.4;
+n2 = 12.2;
+sub = n1 – n2;
+
+cout<< “Subtraction of two decimal numbers : “ << sub << endl;
+return 0;
+}
+
+Output
+Subtraction of two decimal numbers : 10.2
+
+Write a program to add two decimal numbers.
+#include <iostream>
+using namespace std;
+int main()
+{
+double n1,n2, sum;
+n1 = 3.6;
+n2 = 2.2
+sum = n1 + n2;
+
+cout<< “Sum of two decimal numbers : “ << sum << endl;
+return 0;
+}
+Output
+Sum of two decimal numbers :  5.8
+
+Practice Questions(Minimum 2)
+*Medium to Hard level - This line is for developers info. Kindly remove it before creating a PR
+Write a program to take base and height as inputs from the user and find the area of triangle.
+Formula – 1/2 * base * height
+Write a program to find the sum of the n terms of a series.
+1/2 + 3/4 + 5/6 + 7/8 + 9/10 --------------- n terms
