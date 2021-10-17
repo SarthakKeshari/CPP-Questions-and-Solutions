@@ -16,10 +16,11 @@ using namespace std;
 
 using ll = long long;
 
-const int MAXN = (int)(2e5) + 5;
+const int MAXN = (int)(2e5) + 5; //constant is declared with a with greater value.
 vector<ll> dSquare;
 ll perfectSquare[5*MAXN];
 ll cnt[MAXN];
+//function is made for calculating the roots of the equation.
 void solve() {
     FR(i, MAXN) cnt[i] = 0;
     int N;
@@ -32,6 +33,7 @@ void solve() {
     ll res = 0;
     ll pref = 0;
     ll prefCnt = 0;
+    //checking if roots are real or not and returning them.
     FR(a, MAXN) {
         if (cnt[a]) {
             res += cnt[a]*cnt[a]*(a+2);
@@ -47,6 +49,7 @@ void solve() {
     }
     cout << res << '\n';
 }
+//Driver code.
 int main() {
     cin.tie(0);
     cin.sync_with_stdio(0);
@@ -60,6 +63,7 @@ int main() {
     }
     int T;
     cin >> T;
+    //Function call.
     while (T-->0) {
         solve();
     }
