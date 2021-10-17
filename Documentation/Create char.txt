@@ -1,0 +1,54 @@
+Main Topic - String
+Sub-topic - for loop 
+
+Formal Definition   *You can refer to an authentic source for this. This line is for developer info . Kindly remove it before creating a PR 
+ It is a Composite data type. 
+ Composite Data type is user defined and created with help of primitive data types ( char data type in this case) and other composite data type.
+ 
+ 
+ Easy and Clear Explanation (along with examples)
+ 
+ Example 1:
+ string s = "Documentation" ;   //Declaration and static initialization (Initializing a value to a variable at the time of writing the code)
+ 
+ Example 2:
+ string s ;  //Declaring a String data type variable 
+ cout << "Enter a String : " ;  // Printing statement in CPP
+ getline(cin , s);   // Dynamic Initialization of String data type variable and Input Statement for String data type
+ 
+ Solved Questions(Maximum 2)
+ 
+ Write a program to input a string and print its characters in different lines.
+ #include <iostream>  // class for handling input and output
+ #include <string>    // to use the functions in string library
+ 
+ using namespace std;
+ 
+ int main()
+ {
+    string s="Code";
+    for(int x = 0 ; x<=s.length()-1 ; x++)
+    {
+        cout <<s[x]<< endl;
+    }
+    return 0;
+ }
+ 
+ 
+ Output
+ C
+ o
+ d
+ e
+ 
+ 
+ Practice Questions(Minimum 2)
+ *Medium to Hard level - This line is for developers info . Kindly remove it before creating a PR
+ 
+ Question 1: Write a program to check if the string is Palindrome or not.  
+ A string is Palindrome if it reads the same backward as forward.
+ Example : madam
+ 
+ Question 2: Write a program to check whether two strings are the anagram.
+ Two strings are called the anagram if they contain the same characters. However, the order or sequence of characters can be different.
+ Example : cat , act 
