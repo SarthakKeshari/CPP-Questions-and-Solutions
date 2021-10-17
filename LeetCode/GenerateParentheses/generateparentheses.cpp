@@ -13,12 +13,12 @@ public:
     }
     void helper(string s, int n, int l, int r){
         if (l < r || l > n || r > n) return;  // exceed the bundary -> return
-	    if (l == n && r == n){
-	        result.push_back(s);
-	        return;
-	    }
-		helper(s + "(", n, l+1, r);
-		helper(s + ")", n, l, r+1);
+        if (l == n && r == n){
+            result.push_back(s);
+            return;
+        }
+        helper(s + "(", n, l+1, r);
+        helper(s + ")", n, l, r+1);
     }
 };
 //Drive code starts.
