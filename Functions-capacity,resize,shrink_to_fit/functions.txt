@@ -1,0 +1,106 @@
+Main Topic – Functions
+Sub-topic – capacity()
+
+Formal Definition
+•	It is a built in function.
+•	It tells us the size of the amount of space that is allocated currently.
+•	It does not take any parameters.
+
+Easy and Clear Explanation (along with examples)
+Example
+
+int cap = vt.capacity()
+
+Here we have taken vt as vector and cap of int datatype to store the capacity of vector.
+Solved Questions
+#include<iostream>  
+#include<vector>  
+using namespace std;  
+int main()  
+{  
+    vector<int> vt{11,22,30};  
+    int c=vt.capacity();  
+    cout<<"Capacity of the vector is :"<<cap;  
+    	    return 0;  
+}  
+
+Output 
+
+Capacity of the vector is 3
+
+
+Practice Questions
+Write a program to find the capacity of the string s = ‘’Diwali Festival”
+Write a program to find the capacity of the vector {12.3,45.6,24.7,87.2,67.1,22.3}
+
+
+Main Topic – Functions
+Sub-topic – resize()
+
+Formal Definition
+•	It is a built in function.
+•	It is used for changing the size of the vector.
+•	It does not take any parameters.
+
+Easy and Clear Explanation (along with examples)
+Example
+
+vt.resize(2,8)
+
+Here we have taken vt as vector.
+Solved Questions
+#include<iostream>  
+#include<vector>  
+using namespace std;  
+int main()  
+{  
+    vector<string>  vt{"Pizza","Burger","Pasta"};  
+    cout<<” vt = ";  
+    for(int i=0;i<vt.size();i++)  
+    cout<<vt[i]<<" ";  
+    vt.resize(5,"Noodles");  
+    for(int i=0;i<vt.size();i++)  
+    cout<<vt[i]<<" ";  
+    return 0;  
+}
+
+Output
+ vt = Pizza , Burger , Pasta , Noodles , Noodles
+
+Practice Questions
+Write a program to resize an vector from 5 to 12.
+
+Main Topic – Functions
+Sub-topic – shrink_to_fit()
+
+Formal Definition
+•	It is a built in function.
+•	It helps to shrink/reduce the capacity to fit in a size. 
+•	It does not take any parameters.
+
+Easy and Clear Explanation (along with examples)
+Example
+
+vt.resize(2,8)
+
+Here we have taken vt as vector.
+Solved Questions
+#include<iostream>  
+using namespace std;  
+int main()  
+{  
+    string s="Funny People";  
+    cout<<s.capacity()<<'\n';  
+    s.shrink_to_fit();  
+    cout<<s.capacity();  
+    return 0;  
+}  
+Output
+12
+12
+
+Practice Questions
+Write a program which takes string as an input from the user , shink_to_fit() function on it and then print the capacity of the string .
+
+							-Anushka Srivastava
+
