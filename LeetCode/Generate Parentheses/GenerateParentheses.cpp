@@ -21,7 +21,7 @@ public:
 		helper(s + ")", n, l, r+1);
     }
 };
-//Drive code starts
+//Drive code starts.
 int main(){
     Solution s;
     //calling method generateParentheses() with number.
