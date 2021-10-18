@@ -19,9 +19,9 @@ int main ()
 	
   int s[n];                         //array to store the values
   int counter = 0;                  //to count the number of plaindrome numbers in the array
-  int pos = 0;                      //to count the number of posotive numbers in the array
+  int pos = 0;                      //to count the number of positive numbers in the array
 	
-  for (int i = 0; i < n; i++)           //input the array
+  for (int i = 0; i < n; i++)           //to input the array
     {
       cin >> s[i];
     }
@@ -30,7 +30,7 @@ int main ()
     {
       if (s[j] > 0)
 	{
-	  pos++;                         
+	  pos++;                                 //pos variable increases by one if the number is positive
 	      
 	  int p, num;
 	  p = s[j];                              //to store the given number in another variable, so that it could be used in the loop to check if it's palindrome or not
