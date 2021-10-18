@@ -13,61 +13,67 @@ using namespace std;
 int main ()
 {
   int n;
+	
   cout << "Enter the number of inputs you want to check: ";
   cin >> n;
+	
   int s[n];
   int counter = 0;
   int pos = 0;
+	
   for (int i = 0; i < n; i++)
     {
       cin >> s[i];
     }
 
-
-
   for (int j = 0; j < n; j++)
     {
       if (s[j] > 0)
 	{
-	  pos = pos + 1;
-	  int p, q, num;
-	  q = s[j];
+	  pos++;
+	      
+	  int p, num;
 	  p = s[j];
 	  num = s[j];
+	      
 	  int y = 0;
-      int d = 0;
+          int d = 0;
 	  
 	      while (p > 0)
 		{
 		  d = p % 10;
 		  y = (y * 10) + d;
-          p = p / 10;
+                  p = p / 10;
 		}
 		
 	      if (num == y)
 		{
-		  counter = counter + 1;
+		  counter++;
 		}
-	    y = 0;
+	      
+	        y = 0;
 	}
 	
     }
 
   if (pos == n)
     {
-      if (counter >= 1)
-	  {
-	    cout << "True";
-	  }
-      else
-	  {
-	    cout << "False";
-	  }
+      
+	  if (counter >= 1)
+	    {
+	       cout << "True";
+	    }
+          else
+	    {
+	       cout << "False";
+	    }
+	  
     }
   else
     {
       cout << "False";
     }
 
+	
   return 0;
 }
