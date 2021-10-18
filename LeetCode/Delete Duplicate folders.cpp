@@ -1,5 +1,11 @@
 //https://leetcode.com/problems/delete-duplicate-folders-in-system/
 
+// Q. Two folders (not necessarily on the same level) are identical if they contain the same non-empty set of identical subfolders and underlying subfolder structure. The folders do not need to be at the root level to be identical.
+// If two or more folders are identical, then mark the folders as well as all their subfolders.
+
+#include<bits/stdc++.h>
+using namespaced std;
+
 class Solution {
 	using ull = unsigned long long;
 
@@ -58,7 +64,7 @@ class Solution {
 		}
 	};
 
-public:
+int main(){
 	vector<vector<string>> deleteDuplicateFolder(vector<vector<string>>& paths) {
 		folder_t root;
 		unordered_map<ull, int> hash_to_count;
@@ -69,6 +75,7 @@ public:
 		paths.erase(remove_if(paths.begin(), paths.end(), [&](auto& path) { return paths_to_keep.count(&path) == 0; }), paths.end());
 		return paths;
 	}
-};
+	
+}
 
 // Solution By Rajat Jain
