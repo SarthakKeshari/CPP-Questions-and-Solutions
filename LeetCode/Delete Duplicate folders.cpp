@@ -3,6 +3,24 @@
 // Q. Two folders (not necessarily on the same level) are identical if they contain the same non-empty set of identical subfolders and underlying subfolder structure. The folders do not need to be at the root level to be identical.
 // If two or more folders are identical, then mark the folders as well as all their subfolders.
 
+//Border condition 1:
+    //use Treemap to make sure the same sequence hashkey genenation
+
+    //Border condition 2：
+    //a and z might be regarded deleted as it has same nodes even
+    // with different shape
+    //       / \
+    //      a   z
+    //     / \   \
+    //    c   w   c
+    //   /    \    \
+    //  b      y    b
+    //               \
+    //                w
+    //                 \
+    //                  y
+
+
 #include<bits/stdc++.h>
 using namespaced std;
 
