@@ -1,0 +1,4 @@
+-------------------------------------------------Steps To Install Dev C++-----------------------------------------------------------
+Step 1:-Download Dev C++
+    You can Download Dev C++ from sourceforge's official release.You can google it or you can paste the below link instead directly to 
+    to Download directly. 
