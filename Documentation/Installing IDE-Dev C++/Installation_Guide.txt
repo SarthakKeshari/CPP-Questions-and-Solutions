@@ -7,14 +7,14 @@ Step 1:-Download Dev C++
 Step 2:- Install Dev C++ 
     Click on the setup.exe you have downloaded.
     
-    i).     You will a dialog box for selecting language
+    i).     You will see a dialog box for selecting language
             (*language.png)
             Select Your Preferred language and click on OK.
     
     ii).    You will see another dialog box saying License Agreement click on I Agree.
             (*Agreement.png)
     
-    iii).   Now Select Type select type of install to full click on the next
+    iii).   Now select type of install to full and click on the next.
             (*components.png)
     
     iv).    Select Directory in which you want to install your IDE and click on Install.
@@ -40,12 +40,13 @@ Step 3:- Setting Up Dev C++:-
     You have successfully installed and configured Dev C++ ;).
     
 Step 4:- Creating First File in Dev C++-
-    i).     Click on file and select new and select source file.
+    i).     Click on file => new => source file.
             (*file.png)
     
     ii).    Write your code and click on execute on navbar and click on compile and run and save your file with some name.
+                execute => compile and run.
             (*hello.png).
-            It will show you the out put on the console
+            It will show you the output on the console.
             (*output.png).
             
             
