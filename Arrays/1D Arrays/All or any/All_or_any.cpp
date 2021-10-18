@@ -57,7 +57,7 @@ int main ()
     }
 
   if (pos == n)
-    {
+      {
       
 	  if (counter >= 1)
 	    {
@@ -68,7 +68,7 @@ int main ()
 	       cout << "False";
 	    }
 	  
-    }
+      }
   else
     {
       cout << "False";
