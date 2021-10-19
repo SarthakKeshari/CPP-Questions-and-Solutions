@@ -10,23 +10,22 @@ Pre-requisites:
 step 1: Download ans Install Mingw (https://sourceforge.net/projects/mingw/)
 Eclipse CDT uses C/C++ Compiler. Hence before we can start using Eclipse CDT for C/C++ development, 
 we need to have a proper GCC compiler on our system. We can have ‘MinGW’  compiler on our machine that will be used by eclipse.
-
-
+	img4
 step 2: add it to environment path variable
-
+	img1
 Step 3: download eclipse (https://www.eclipse.org/downloads/)
-  
+  	img2
 Step 4: install eclipse
-  
+  	img3
 Step 5: open eclipse
-  
+  	img5
 Step 6:click on files then click on c++ project
-  
+  	img8
 Step 7: give the name to project(cpp program)
   -Here you can specify the name of the project. You can select an Empty project or a sample “Hello World” application project. 
-
+	img9
 Step 8: write a program
-  
-Step 9: click on green play button to execute the code
+        img10
+Step 9: click on green play button to execute the code (img11)
   In this tutorial, we have seen the features, installation, configuration, and development using Eclipse CDT IDE. 
   Although Eclipse IDE is primarily used for Java development, we can also use it for development using other programming languages like C/C++, PHP, Perl, Python to name a few.
