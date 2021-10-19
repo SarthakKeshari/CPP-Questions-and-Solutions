@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- EnlighterJS Resources !-->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+    <link rel="icon" type="image/ico" href="./images/logo.png" />
+
+    <title>Introduction to C++</title>
+    <style>
+        body{
+            overflow-x:hidden;
+            line-height: 170%;
+        }
+
+        @media only screen and (max-width: 640px) {
+            .sub-topic, .heading{
+                position: sticky; 
+                top: 80px;
+            }
+        }
+
+        @media only screen and (min-width: 640px) {
+            .sub-topic, .heading{
+                    position: sticky; 
+                    top: 90px;
+                }
+        }
+
+        @media only screen and (max-width: 640px) {
+            .code-section{
+                padding: 0px 10px 0px 10px;
+            }
+        }
+
+        @media only screen and (min-width: 640px) {
+            .code-section{
+                    padding: 0px 100px 0px 100px;
+                }
+        }
+
+        .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a{
+            background-color: lightgray;
+            color: black;
+        }
+
+        .accordion-button{
+            box-shadow:none !important;
+            outline:0px !important;
+        }
+
+        a{
+            text-decoration: none;
+        }
+    </style>
+    
+  </head>
+  <body>
+    <div class="d-flex justify-content-end" style="position: sticky; top: 85vh;"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+        <span class="btn btn-outline-primary p-2 bg-light shadow" style="position: absolute; border-radius: 100% 100% 10% 100%;"><img class="" src="./images/question.png" alt="" height="25px" width="25px"></span>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+              <h5 class="modal-title" id="exampleModalLabel">Feature - Under Construction</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Recipient:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Message:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send message</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    <nav class="navbar navbar-light bg-light shadow sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><p class="h2 m-0 p-0">CodersArena</p><sup class="h6">(Your C++ partner)</sup></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Documentation Topics</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </form>
+                    <br>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 h6 pe-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Datatypes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                <li><a class="dropdown-item" href="#">Introduction</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">int</a></li>
+                                <li><a class="dropdown-item" href="#">double</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Heading container begins-->
+    <div class="container-fluid mt-4 p-0">
+        <!--Heading general description starts-->
+        
+        <div class="heading accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header outline-none d-grid gap-2 text-center h2 py-1 text-center bg-light" id="headingTwo">
+                <button class="btn collapsed btn-light shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#intro_authors" aria-expanded="false" aria-controls="intro_authors">
+                    <!--Write topic heading-->
+                    <h3 class="m-0">Introduction to C++</h3>
+                </button>
+              </h2>
+              <div id="intro_authors" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body mt-4">
+                    <h6>Authors</h6>
+                    <div class="list-group list-group-flush">
+                        <!-- <a href="{YOUR GITHUB URL HERE}" class="list-group-item list-group-item-action author-names">{YOUR NAME HERE}</a> -->
+                        <a href="#" class="list-group-item list-group-item-action author-names">Anushka Srivastava</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-4 text-center d-flex align-items-center">
+                    <img class="w-75 img-fluid" src="./images/cpp.png" alt="C++ Logo">
+                </div>
+                <div class="col-lg-10 col-md-8 col-sm-8 d-flex align-items-center">
+                    <div><b>C++</b> was developed by <b>Bjarne Stroustrup</b> at in <b>1979</b> at <b>Bell Lab</b>. It is a popular general-purpose programming language . It can also be considered as a superset of C language. It supports both procedural and object oriented programming paradigms as it is a Multi-paradigm language. It allows you to divide complex problems into smaller parts with help of objects. <b>C++</b> is a medium level programming language.</div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        <!--Heading general description ends-->
+    </div>
+    <!--Heading container ends-->
+
+
+    <!--You may use the below code in case you wish to create sub-heading-->
+    <!--
+    <div class="container-fluid shadow-sm mt-4 p-0">
+        <div class="heading h4 text-center bg-light">
+            Syntax Reference
+        </div>
+    </div>
+    -->
+
+
+    <!--Main container starts-->
+    <div class="container-fluid mt-4">
+        <!--Topic container starts-->
+        <!--Enter your topicName-subtopicName in id. Example: id="String-substring" -->
+        <div class="topic container-fluid" id="intro-advantages">
+            <div class="accordion text-left row sub-topic mt-5 mb-4" id="accordionExample">
+                <div class="accordion-item text-left p-0">
+                  <h2 class="accordion-header d-grid text-left gap-2" id="headingTwo">
+                    <button class="accordion-button text-left btn-dark text-light bg-dark collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#topic1_authors" aria-expanded="false" aria-controls="collapseTwo">
+                      <!--Provide topic title here-->
+                      <h5 class="m-0">History</h5>
+                      <span class="p-1 rounded-circle ms-2 bg-light"><img src="./images/write.png" alt="" height="25px" width="25px"></span>
+                    </button>
+                  </h2>
+                  <div id="topic1_authors" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body mt-4">
+                        <h6>Authors</h6>
+                        <div class="list-group list-group-flush">
+                            <!-- <a href="{YOUR GITHUB URL HERE}" class="list-group-item list-group-item-action author-names">{YOUR NAME HERE}</a> -->
+                            <a href="#" class="list-group-item list-group-item-action author-names">Anushka Srivastava</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!--You may add 2 or 4 br(break) tags to separate two sub-topics if any-->
+            <br>
+
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="advantages">                
+                <!--Any additional subtopic description starts-->
+                <div class="">
+                    <p>
+                        A Danish Computer Scientist , Bjarne Stroustrup started working on ‘C with classes’  which was a predecessor to C++ in 1979. He found that Simula has some very helpful features for development of software on large scale. Therefore , he set out to enhance C Language with features similar to Simula. At first , he added some features to C compiler which included default arguments, derived classes, classes , inlining and strong typing. <br>
+Then , he began developing a successor to C with classes which was named as C++ in 1982. Futhermore , he added some more features like operator overloading, functions, virtual functions, comments, constants , references. <br><br>
+The first edition of C++ Programming was released in 1985 and came into commercial implementation in October , 1985. Then , C++ 2.0 was released in 1989 followed by second updated edition  of C++ Programming Language in 1991 which included features like abstract class, multiple inheritance, static member functions and protected members. The Annotated C++ Reference Manual was published in 1990. <br><br>
+C++98 was released  in 1998. Then, in 2003 , C++03 was released.  After enlarging the standard library , adding some more features, C++11 was released in 2011.In 2014,  after minor update , C++14 . Then , introduction of various new additions and features was made in C++17. In February , 2020 , C++ was finalized. On 4th September, 2020 C++20 standard draft was approved which was later published officially on  15th December,2020. <br>
+                    <p>
+                </div>
+                <!--Any additional subtopic description ends-->
+
+            </div>
+            <!--Sub-topic ends-->
+            <br>
+            
+        </div>
+        <!--Topic container ends-->
+
+        <br>
+
+        <!--Topic container starts-->
+        <!--Enter your topicName-subtopicName in id. Example: id="String-substring" -->
+        <div class="topic container-fluid" id="intro-history">
+            <div class="accordion text-left row sub-topic mt-5 mb-4" id="accordionExample">
+                <div class="accordion-item text-left p-0">
+                  <h2 class="accordion-header d-grid text-left gap-2" id="headingTwo">
+                    <button class="accordion-button text-left btn-dark text-light bg-dark collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#topic2_authors" aria-expanded="false" aria-controls="collapseTwo">
+                      <!--Provide topic title here-->
+                      <h5 class="m-0">Advantages</h5>
+                      <span class="p-1 rounded-circle ms-2 bg-light"><img src="./images/write.png" alt="" height="25px" width="25px"></span>
+                    </button>
+                  </h2>
+                  <div id="topic2_authors" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body mt-4">
+                        <h6>Authors</h6>
+                        <div class="list-group list-group-flush">
+                            <!-- <a href="{YOUR GITHUB URL HERE}" class="list-group-item list-group-item-action author-names">{YOUR NAME HERE}</a> -->
+                            <a href="#" class="list-group-item list-group-item-action author-names">Anushka Srivastava</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!--You may add 2 or 4 br(break) tags to separate two sub-topics if any-->
+            <br>
+
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="history">                
+                <!--Any additional subtopic description starts-->
+                <div class="">
+                    <ul>
+                        <li>C++ is a portable and platform independent language that means a user can the same program easily on different platforms and operating systems.</li>
+                        <li>C++ is a  Multi Paradigm as it supports seven different styles of programming.</li>
+                        <li>The speed performance of optimized code of C++ is comparatively much better than C Language.</li>
+                        <li>C++  has a feature of Dynamic Memory Allocation which allows users to control and manage the memory according to their requirements.</li>
+                        <li>C++ supports classes, objects, polymorphism, inheritance, encapsulation , abstraction as it is an Object Oriented Language.</li>
+                    <ul>
+                </div>
+                <!--Any additional subtopic description ends-->
+
+            </div>
+            <!--Sub-topic ends-->
+            <br>
+            
+        </div>
+        <!--Topic container ends-->
+        
+        <br>
+
+        <!--Topic container starts-->
+        <!--Enter your topicName-subtopicName in id. Example: id="String-substring" -->
+        <div class="topic container-fluid" id="intro-disadvantages">
+            <div class="accordion text-left row sub-topic mt-5 mb-4" id="accordionExample">
+                <div class="accordion-item text-left p-0">
+                  <h2 class="accordion-header d-grid text-left gap-2" id="headingTwo">
+                    <button class="accordion-button text-left btn-dark text-light bg-dark collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#topic3_authors" aria-expanded="false" aria-controls="collapseTwo">
+                      <!--Provide topic title here-->
+                      <h5 class="m-0">Disadvantages</h5>
+                      <span class="p-1 rounded-circle ms-2 bg-light"><img src="./images/write.png" alt="" height="25px" width="25px"></span>
+                    </button>
+                  </h2>
+                  <div id="topic3_authors" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body mt-4">
+                        <h6>Authors</h6>
+                        <div class="list-group list-group-flush">
+                            <!-- <a href="{YOUR GITHUB URL HERE}" class="list-group-item list-group-item-action author-names">{YOUR NAME HERE}</a> -->
+                            <a href="#" class="list-group-item list-group-item-action author-names">Anushka Srivastava</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!--You may add 2 or 4 br(break) tags to separate two sub-topics if any-->
+            <br>
+
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="disadvantages">                
+                <!--Any additional subtopic description starts-->
+                <div class="">
+                    <ul>
+                        <li>C++ gives user full access to memory as there is an absence of garbage collector.</li>
+                        <li>C++ does not support built in threads.</li>
+                        <li>The concept of pointers consumes a lot of memory.</li>
+                        <li>C++ has no security.</li>
+                        <li>C++ programs can get very complex for high level programs.</li>
+                    </ul>
+                </div>
+                <!--Any additional subtopic description ends-->
+
+            </div>
+            <!--Sub-topic ends-->
+            <br>
+            
+        </div>
+        <!--Topic container ends-->
+
+        <br>
+
+        <!--Topic container starts-->
+        <!--Enter your topicName-subtopicName in id. Example: id="String-substring" -->
+        <div class="topic container-fluid" id="intro-ide">
+            <div class="accordion text-left row sub-topic mt-5 mb-4" id="accordionExample">
+                <div class="accordion-item text-left p-0">
+                  <h2 class="accordion-header d-grid text-left gap-2" id="headingTwo">
+                    <button class="accordion-button text-left btn-dark text-light bg-dark collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#topic4_authors" aria-expanded="false" aria-controls="collapseTwo">
+                      <!--Provide topic title here-->
+                      <h5 class="m-0">IDEs for C++</h5>
+                      <span class="p-1 rounded-circle ms-2 bg-light"><img src="./images/write.png" alt="" height="25px" width="25px"></span>
+                    </button>
+                  </h2>
+                  <div id="topic4_authors" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body mt-4">
+                        <h6>Authors</h6>
+                        <div class="list-group list-group-flush">
+                            <!-- <a href="{YOUR GITHUB URL HERE}" class="list-group-item list-group-item-action author-names">{YOUR NAME HERE}</a> -->
+                            <a href="#" class="list-group-item list-group-item-action author-names">Anushka Srivastava</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!--You may add 2 or 4 br(break) tags to separate two sub-topics if any-->
+            <br>
+
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="ide">                
+                <!--Any additional subtopic description starts-->
+                <div class="">
+                    <ol>
+                        <li>Visual Studio Code</li>
+                        <li>Eclipse</li>
+                        <li>Code::Blocks</li>
+                        <li>Turbo C/C++</li>
+                        <li>Dev C++</li>    
+                    </ol>
+                </div>
+                <!--Any additional subtopic description ends-->
+
+            </div>
+            <!--Sub-topic ends-->
+            <br>
+            
+        </div>
+        <!--Topic container ends-->
+
+        <br>
+
+        <!--Topic container starts-->
+        <!--Enter your topicName-subtopicName in id. Example: id="String-substring" -->
+        <div class="topic container-fluid" id="intro-applications">
+            <div class="accordion text-left row sub-topic mt-5 mb-4" id="accordionExample">
+                <div class="accordion-item text-left p-0">
+                  <h2 class="accordion-header d-grid text-left gap-2" id="headingTwo">
+                    <button class="accordion-button text-left btn-dark text-light bg-dark collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#topic5_authors" aria-expanded="false" aria-controls="collapseTwo">
+                      <!--Provide topic title here-->
+                      <h5 class="m-0">Applications</h5>
+                      <span class="p-1 rounded-circle ms-2 bg-light"><img src="./images/write.png" alt="" height="25px" width="25px"></span>
+                    </button>
+                  </h2>
+                  <div id="topic5_authors" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body mt-4">
+                        <h6>Authors</h6>
+                        <div class="list-group list-group-flush">
+                            <!-- <a href="{YOUR GITHUB URL HERE}" class="list-group-item list-group-item-action author-names">{YOUR NAME HERE}</a> -->
+                            <a href="#" class="list-group-item list-group-item-action author-names">Anushka Srivastava</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!--You may add 2 or 4 br(break) tags to separate two sub-topics if any-->
+            <br>
+
+            <!--Sub-topic starts-->
+            <!--Enter your subtopicName in id. Example: id="substring" -->
+            <div class="row ml-2" id="application">                
+                <!--Any additional subtopic description starts-->
+                <div class="">
+                    <ul>
+                        <li>C++ helps in development of games.</li>
+                        <li>C++ is used to develop GUI based Applications like Adobe</li>
+                        <li>C++ is used to write database management software.</li>
+                        <li>C++ is widely used for rendering purposes in Browsers.</li>
+                        <li>C++ is also used for writing Compilers of very high level programming language.</li>
+                    </ul>
+                </div>
+                <!--Any additional subtopic description ends-->
+
+            </div>
+            <!--Sub-topic ends-->
+            <br>
+            
+        </div>
+        <!--Topic container ends-->
+
+        <br>
+    </div>
+    <!--Main container ends-->
+    
+
+    <br><br>
+
+    <div class="text-light bg-dark px-2 text-center">
+        Hope the content was helpful
+      <!--Copyright &copy; 2021 <a class="text-light" href="https://github.com/SarthakKeshari">Sarthak Keshari</a>-->  
+    </div>
+  
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
