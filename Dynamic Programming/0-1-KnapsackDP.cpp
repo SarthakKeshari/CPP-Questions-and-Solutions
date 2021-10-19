@@ -51,7 +51,7 @@ int main()
     int W;
     cout<<"Maximum weights of bags"<<endl;
     cin>>W;
-    cout<<"Maximum values is "<<knapSack(W,val,wt,n)<<endl;
+    cout<<"Maximum values is "<<knapSack(W,wt,val,n)<<endl;
 
     return 0;
 }
