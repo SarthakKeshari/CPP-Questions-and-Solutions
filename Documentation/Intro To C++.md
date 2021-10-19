@@ -1,5 +1,7 @@
+### ADDED Anushka Srivastava's Contribution to website
+
 Introduction to C++
-				-Anushka Srivastava
+			<br> -Anushka Srivastava <br>
 C++ was developed by Bjarne Stroustrup at in 1979 at Bell Lab. It is a popular general-purpose programming language . It can also be considered as a superset of C language. It supports both procedural and object oriented programming paradigms as it is a Multi-paradigm language. It allows you to divide complex problems into smaller parts  with help of objects. C++ is a medium level programming language.
 
 History
