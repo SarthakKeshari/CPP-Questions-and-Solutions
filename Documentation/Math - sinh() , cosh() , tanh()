@@ -1,0 +1,58 @@
+Main Topic - Math
+Sub-topic - sinh() , cosh() , tanh()
+
+Formal Definition   *You can refer to an authentic source for this . This line is for developer info. Kindly remove it before creating a PR.
+    sinh() , cosh() , tanh() : returns the hyperbolic trigonometric ratios of argument(double data type) provided.
+    The value of argument provided must be in radians.
+
+
+Easy and clear explanation (along with examples)
+
+Example 1:
+double x = 8.10; //Declaration and static initialization(Initializing a value to a variableat the time of writing the code)
+
+Example 2:
+double x;   //Declaring a double data type variable
+cout << "Enter the angle in radian : " ;  //Printing statement in CPP
+cin >> x ;  //Dynamic initialization of double data type variable and input Statement for primitive data types
+
+*Only for introduction to hyperbolic trigonometric functions (NOT TO BE USED IN THIS PROGRAM AS WE ARE USING " Math Library ".) 
+sinh(x)=(exp(x)-exp(-x))/2         
+cosh(x)=(exp(x)+exp(-x))/2
+tanh(x)=(exp(x)-exp(-x))/(exp(x)+exp(-x))
+
+
+Solved Questions(Maximum 2)
+
+Write a program to find the sinh(),cosh(),tanh() for the argument value 8.10 and print the value of Hyperbolic trigonometric ratios mentioned .
+#include <iostream>   // class to handle input and output
+#include <math.h>    // Math library to use mathematical functions
+
+using namespace std;
+
+int main()
+{
+  double ag=8.10;
+  cout << sinh(ag) <<endl;
+  cout << cosh(ag) <<endl;
+  cout << tanh(ag) <<endl;
+  
+  return 0;
+}
+
+
+Output
+1647.23
+1647.23
+1
+
+
+Practice Questions(Minimum 2)
+
+Question 1: Write a program to input the argument value in x , calculate sinh(),cosh(),tanh() and find cosech(x) , sech(x) and coth(x).
+
+Question 2: Write a program to accept argument values in a,b . Calculate the Hyperbolic trigonometric function for a and b .Prove:
+1.)  2*sinh(a)*cosh(b) = sinh(a+b)+sinh(a-b) 
+2.)  sinh(2b) = 2*sinh(b)*cosh(b)
+
+Hence print "Proved" .
