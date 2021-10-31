@@ -1,0 +1,31 @@
+﻿Steps to install Eclipse for C++
+---------------------------------------------------------------------------------------------------- 
+
+
+Pre-requisites:
+-system with processor intel i3 or ryzen 3 and above
+-ram: 4gb and above
+-internet connectivity to download eclipse and some packages 
+----------------------------------------------------------------------------------------------------------------------
+step 1: Download ans Install Mingw (https://sourceforge.net/projects/mingw/)
+Eclipse CDT uses C/C++ Compiler. Hence before we can start using Eclipse CDT for C/C++ development, 
+we need to have a proper GCC compiler on our system. We can have ‘MinGW’  compiler on our machine that will be used by eclipse.
+	
+step 2: add it to environment path variable
+	
+Step 3: download codeblocks
+  	img(1),img(2)
+Step 4: install codeblocks
+  	img(3),img(4),img(5)
+Step 5: open codeblocks
+  	img(7)
+Step 6:click on files then click on c++ project
+  	img(9)
+Step 7: give the name to project(cpp program)
+  -Here you can specify the name of the project. You can select an Empty project or a sample “Hello World” application project. 
+	img(14)
+Step 8: write a program
+        img(14)
+Step 9: click on yes button to execute the code (img(15))
+  In this tutorial, we have seen the features, installation, configuration, and development using CodeBlocks IDE. 
+  we can also use it for development using other programming languages like C/C++, PHP, Perl, Python to name a few.
