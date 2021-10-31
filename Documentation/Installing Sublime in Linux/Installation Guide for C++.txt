@@ -1,0 +1,75 @@
+----------------------------------------------Steps To Install Sublime in Ubuntu------------------------------------
+
+Step 1:- Add the GPG key and Sources
+  i).   Firt open the terminal either from the menu or press CTRL+ALt+T.
+        (*terminal.png)
+        
+  ii).  Add/Install the GPG key by pasting the link given below:-
+        (*gpg key.png)
+        
+          wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+          
+        Now enter the your root password and press enter(you won't see anything while typing your password as usual (; ).
+        (*key add success.png)
+      
+  iii). Now ensure that your apt is set up to work with https sources, So paste the below command in the terminal and press enter.
+        
+        sudo apt-get install apt-transport-https
+        (*apt setup.png)
+        (in my case it is already set up (: ).
+  
+
+Step 2:- Select the chanel to use:-
+  i).   Now you have two choices either you can use stable release or the developer release, i recommend you to use stable release.
+          For Stable release paste below link:-
+            echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+            (*stable.png)
+          For dev release paste below link:-
+            echo "deb https://download.sublimetext.com/ apt/dev/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+  
+  ii).  Now update the repos by pasting either of the below commands in terminal :-
+          sudo apt-get update                               or
+          sudo apt update
+        
+  iii). Now install the sublime by pasting the below command in terminal:-
+          sudo apt-get install sublime-text
+          (*installing.png)
+  
+  
+  =========================================================Sublime setup for C++===========================================================
+  Step 1:- Click on Tools then build system and then click on New Build System.
+          Tools=> build system => new Build System.
+          
+          Now paste my build system and save it by some name
+          
+          
+              {
+                "cmd": ["g++", "-Wall", "-std=c++11", "${file}", "-o", "${file_path}/${file_base_name}"],
+                "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+                "working_dir": "${file_path}",
+                "selector": "source.c, source.c++",
+
+                "variants":
+                [
+                  {
+                    "name": "Run",
+                    "cmd": ["x-terminal-emulator", "-e", "bash", "-c", "g++ -Wall -std=c++11 '${file}' -o '${file_path}/${file_base_name}' && '${file_path}/${file_base_name}'; read -p 'Press any key to continue...'"]
+                  }
+                ]
+              }	
+        Now save it with some name.
+        (*build.png)
+        
+ Step 2:- Again Go to Tools => build system and now find the build system with the name you just saved.
+ 
+ Step 3:- Write some program or copy below program.
+      #include<bits/stdc++.h>
+      using namespace std;
+      int main(){
+          cout << "Hello world\n";
+      }
+      now save this program with some name.
+      
+  Step 4:- Now press ctrl + shift + b and then select (*the name by which you saved your build-system file)-Run and press enter and your program will run in 
+  terminal also if takes user input than also take input in terminal.
+  (*output.png)
